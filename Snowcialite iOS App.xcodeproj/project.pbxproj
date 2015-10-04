@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */; };
+		CC360FED1BC0E0E6001B91E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FEC1BC0E0E6001B91E8 /* ViewController.swift */; };
+		CC360FF01BC0E0E6001B91E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC360FEE1BC0E0E6001B91E8 /* Main.storyboard */; };
+		CC360FF21BC0E0E6001B91E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC360FF11BC0E0E6001B91E8 /* Assets.xcassets */; };
+		CC360FF51BC0E0E6001B91E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC360FF31BC0E0E6001B91E8 /* LaunchScreen.storyboard */; };
+		CC3610001BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FFF1BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift */; };
+		CC36100B1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC360FFC1BC0E0E6001B91E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC360FDF1BC0E0E6001B91E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC360FE61BC0E0E6001B91E8;
+			remoteInfo = "Snowcialite iOS App";
+		};
+		CC3610071BC0E0E6001B91E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC360FDF1BC0E0E6001B91E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC360FE61BC0E0E6001B91E8;
+			remoteInfo = "Snowcialite iOS App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC360FE71BC0E0E6001B91E8 /* Snowcialite iOS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snowcialite iOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC360FEC1BC0E0E6001B91E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC360FEF1BC0E0E6001B91E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC360FF11BC0E0E6001B91E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC360FF41BC0E0E6001B91E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC360FF61BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC360FFB1BC0E0E6001B91E8 /* Snowcialite iOS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowcialite iOS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC360FFF1BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snowcialite_iOS_AppTests.swift; sourceTree = "<group>"; };
+		CC3610011BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3610061BC0E0E6001B91E8 /* Snowcialite iOS AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowcialite iOS AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snowcialite_iOS_AppUITests.swift; sourceTree = "<group>"; };
+		CC36100C1BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC360FE41BC0E0E6001B91E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC360FF81BC0E0E6001B91E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3610031BC0E0E6001B91E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC360FDE1BC0E0E6001B91E8 = {
+			isa = PBXGroup;
+			children = (
+				CC360FE91BC0E0E6001B91E8 /* Snowcialite iOS App */,
+				CC360FFE1BC0E0E6001B91E8 /* Snowcialite iOS AppTests */,
+				CC3610091BC0E0E6001B91E8 /* Snowcialite iOS AppUITests */,
+				CC360FE81BC0E0E6001B91E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC360FE81BC0E0E6001B91E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC360FE71BC0E0E6001B91E8 /* Snowcialite iOS App.app */,
+				CC360FFB1BC0E0E6001B91E8 /* Snowcialite iOS AppTests.xctest */,
+				CC3610061BC0E0E6001B91E8 /* Snowcialite iOS AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC360FE91BC0E0E6001B91E8 /* Snowcialite iOS App */ = {
+			isa = PBXGroup;
+			children = (
+				CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */,
+				CC360FEC1BC0E0E6001B91E8 /* ViewController.swift */,
+				CC360FEE1BC0E0E6001B91E8 /* Main.storyboard */,
+				CC360FF11BC0E0E6001B91E8 /* Assets.xcassets */,
+				CC360FF31BC0E0E6001B91E8 /* LaunchScreen.storyboard */,
+				CC360FF61BC0E0E6001B91E8 /* Info.plist */,
+			);
+			path = "Snowcialite iOS App";
+			sourceTree = "<group>";
+		};
+		CC360FFE1BC0E0E6001B91E8 /* Snowcialite iOS AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC360FFF1BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift */,
+				CC3610011BC0E0E6001B91E8 /* Info.plist */,
+			);
+			path = "Snowcialite iOS AppTests";
+			sourceTree = "<group>";
+		};
+		CC3610091BC0E0E6001B91E8 /* Snowcialite iOS AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */,
+				CC36100C1BC0E0E6001B91E8 /* Info.plist */,
+			);
+			path = "Snowcialite iOS AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC360FE61BC0E0E6001B91E8 /* Snowcialite iOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC36100F1BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS App" */;
+			buildPhases = (
+				CC360FE31BC0E0E6001B91E8 /* Sources */,
+				CC360FE41BC0E0E6001B91E8 /* Frameworks */,
+				CC360FE51BC0E0E6001B91E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Snowcialite iOS App";
+			productName = "Snowcialite iOS App";
+			productReference = CC360FE71BC0E0E6001B91E8 /* Snowcialite iOS App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC360FFA1BC0E0E6001B91E8 /* Snowcialite iOS AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC3610121BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS AppTests" */;
+			buildPhases = (
+				CC360FF71BC0E0E6001B91E8 /* Sources */,
+				CC360FF81BC0E0E6001B91E8 /* Frameworks */,
+				CC360FF91BC0E0E6001B91E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC360FFD1BC0E0E6001B91E8 /* PBXTargetDependency */,
+			);
+			name = "Snowcialite iOS AppTests";
+			productName = "Snowcialite iOS AppTests";
+			productReference = CC360FFB1BC0E0E6001B91E8 /* Snowcialite iOS AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC3610051BC0E0E6001B91E8 /* Snowcialite iOS AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC3610151BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS AppUITests" */;
+			buildPhases = (
+				CC3610021BC0E0E6001B91E8 /* Sources */,
+				CC3610031BC0E0E6001B91E8 /* Frameworks */,
+				CC3610041BC0E0E6001B91E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC3610081BC0E0E6001B91E8 /* PBXTargetDependency */,
+			);
+			name = "Snowcialite iOS AppUITests";
+			productName = "Snowcialite iOS AppUITests";
+			productReference = CC3610061BC0E0E6001B91E8 /* Snowcialite iOS AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC360FDF1BC0E0E6001B91E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Snowcialite;
+				TargetAttributes = {
+					CC360FE61BC0E0E6001B91E8 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					CC360FFA1BC0E0E6001B91E8 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = CC360FE61BC0E0E6001B91E8;
+					};
+					CC3610051BC0E0E6001B91E8 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = CC360FE61BC0E0E6001B91E8;
+					};
+				};
+			};
+			buildConfigurationList = CC360FE21BC0E0E6001B91E8 /* Build configuration list for PBXProject "Snowcialite iOS App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC360FDE1BC0E0E6001B91E8;
+			productRefGroup = CC360FE81BC0E0E6001B91E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC360FE61BC0E0E6001B91E8 /* Snowcialite iOS App */,
+				CC360FFA1BC0E0E6001B91E8 /* Snowcialite iOS AppTests */,
+				CC3610051BC0E0E6001B91E8 /* Snowcialite iOS AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC360FE51BC0E0E6001B91E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC360FF51BC0E0E6001B91E8 /* LaunchScreen.storyboard in Resources */,
+				CC360FF21BC0E0E6001B91E8 /* Assets.xcassets in Resources */,
+				CC360FF01BC0E0E6001B91E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC360FF91BC0E0E6001B91E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3610041BC0E0E6001B91E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC360FE31BC0E0E6001B91E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC360FED1BC0E0E6001B91E8 /* ViewController.swift in Sources */,
+				CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC360FF71BC0E0E6001B91E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3610001BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3610021BC0E0E6001B91E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC36100B1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC360FFD1BC0E0E6001B91E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC360FE61BC0E0E6001B91E8 /* Snowcialite iOS App */;
+			targetProxy = CC360FFC1BC0E0E6001B91E8 /* PBXContainerItemProxy */;
+		};
+		CC3610081BC0E0E6001B91E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC360FE61BC0E0E6001B91E8 /* Snowcialite iOS App */;
+			targetProxy = CC3610071BC0E0E6001B91E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC360FEE1BC0E0E6001B91E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC360FEF1BC0E0E6001B91E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC360FF31BC0E0E6001B91E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC360FF41BC0E0E6001B91E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC36100D1BC0E0E6001B91E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC36100E1BC0E0E6001B91E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC3610101BC0E0E6001B91E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Snowcialite iOS App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snowcialite.Snowcialite-iOS-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC3610111BC0E0E6001B91E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Snowcialite iOS App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snowcialite.Snowcialite-iOS-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CC3610131BC0E0E6001B91E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Snowcialite iOS AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snowcialite.Snowcialite-iOS-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snowcialite iOS App.app/Snowcialite iOS App";
+			};
+			name = Debug;
+		};
+		CC3610141BC0E0E6001B91E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Snowcialite iOS AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snowcialite.Snowcialite-iOS-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snowcialite iOS App.app/Snowcialite iOS App";
+			};
+			name = Release;
+		};
+		CC3610161BC0E0E6001B91E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Snowcialite iOS AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snowcialite.Snowcialite-iOS-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Snowcialite iOS App";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CC3610171BC0E0E6001B91E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Snowcialite iOS AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.snowcialite.Snowcialite-iOS-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Snowcialite iOS App";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC360FE21BC0E0E6001B91E8 /* Build configuration list for PBXProject "Snowcialite iOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC36100D1BC0E0E6001B91E8 /* Debug */,
+				CC36100E1BC0E0E6001B91E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC36100F1BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3610101BC0E0E6001B91E8 /* Debug */,
+				CC3610111BC0E0E6001B91E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC3610121BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3610131BC0E0E6001B91E8 /* Debug */,
+				CC3610141BC0E0E6001B91E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC3610151BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC3610161BC0E0E6001B91E8 /* Debug */,
+				CC3610171BC0E0E6001B91E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC360FDF1BC0E0E6001B91E8 /* Project object */;
+}
