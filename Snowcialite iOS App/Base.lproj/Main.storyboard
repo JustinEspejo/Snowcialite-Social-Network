@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuu-NA-qaQ">
+                                <rect key="frame" x="245" y="361" width="110" height="30"/>
+                                <animations/>
+                                <state key="normal" title="'POST' Function"/>
+                                <connections>
+                                    <action selector="postFunctionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K0n-1Z-tAi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ln-1M-6cr">
+                                <rect key="frame" x="250" y="228" width="100" height="30"/>
+                                <animations/>
+                                <state key="normal" title="'GET' Function"/>
+                                <connections>
+                                    <action selector="getFunctionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qh1-Iv-Dhw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.10978618421052631" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3ln-1M-6cr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7BE-6I-Ww1"/>
+                            <constraint firstItem="tuu-NA-qaQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IZB-54-SQR"/>
+                            <constraint firstItem="3ln-1M-6cr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TKu-Mm-aLb"/>
+                            <constraint firstItem="3ln-1M-6cr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="208" id="Ynn-1V-uaB"/>
+                            <constraint firstItem="tuu-NA-qaQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqL-f8-lZK"/>
+                            <constraint firstItem="tuu-NA-qaQ" firstAttribute="top" secondItem="3ln-1M-6cr" secondAttribute="bottom" constant="103" id="xrn-W1-f0y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TKu-Mm-aLb"/>
+                                <exclude reference="IZB-54-SQR"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="getFunctionButton" destination="3ln-1M-6cr" id="urh-Rd-WgF"/>
+                        <outlet property="postFunctionButton" destination="tuu-NA-qaQ" id="3sp-yj-HD6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

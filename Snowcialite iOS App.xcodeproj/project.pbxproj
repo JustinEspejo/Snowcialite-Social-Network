@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6615F496C93A8AC5811AC3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B49EFC162E0FE9EDDFB57D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */; };
 		CC360FED1BC0E0E6001B91E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FEC1BC0E0E6001B91E8 /* ViewController.swift */; };
 		CC360FF01BC0E0E6001B91E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC360FEE1BC0E0E6001B91E8 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90B49EFC162E0FE9EDDFB57D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC360FE71BC0E0E6001B91E8 /* Snowcialite iOS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snowcialite iOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC360FEC1BC0E0E6001B91E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		CC3610061BC0E0E6001B91E8 /* Snowcialite iOS AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowcialite iOS AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snowcialite_iOS_AppUITests.swift; sourceTree = "<group>"; };
 		CC36100C1BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1850D712D1486B7E68FA8BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F937392DA7AC0AC4F409BF9B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6615F496C93A8AC5811AC3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84999543058872F766EB2F21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90B49EFC162E0FE9EDDFB57D /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC360FDE1BC0E0E6001B91E8 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,8 @@
 				CC360FFE1BC0E0E6001B91E8 /* Snowcialite iOS AppTests */,
 				CC3610091BC0E0E6001B91E8 /* Snowcialite iOS AppUITests */,
 				CC360FE81BC0E0E6001B91E8 /* Products */,
+				F0BAC1B08C9356197D7AA551 /* Pods */,
+				84999543058872F766EB2F21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +140,15 @@
 			path = "Snowcialite iOS AppUITests";
 			sourceTree = "<group>";
 		};
+		F0BAC1B08C9356197D7AA551 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1850D712D1486B7E68FA8BA /* Pods.debug.xcconfig */,
+				F937392DA7AC0AC4F409BF9B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC36100F1BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS App" */;
 			buildPhases = (
+				1C0826E3E3D9E6E36924A1CA /* Check Pods Manifest.lock */,
 				CC360FE31BC0E0E6001B91E8 /* Sources */,
 				CC360FE41BC0E0E6001B91E8 /* Frameworks */,
 				CC360FE51BC0E0E6001B91E8 /* Resources */,
+				988B996C2750795581A41E77 /* Embed Pods Frameworks */,
+				03B2AD40B8CB83AD79E132FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +276,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03B2AD40B8CB83AD79E132FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C0826E3E3D9E6E36924A1CA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		988B996C2750795581A41E77 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC360FE31BC0E0E6001B91E8 /* Sources */ = {
@@ -396,6 +471,7 @@
 		};
 		CC3610101BC0E0E6001B91E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1850D712D1486B7E68FA8BA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Snowcialite iOS App/Info.plist";
@@ -407,6 +483,7 @@
 		};
 		CC3610111BC0E0E6001B91E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F937392DA7AC0AC4F409BF9B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Snowcialite iOS App/Info.plist";
@@ -483,6 +560,7 @@
 				CC3610111BC0E0E6001B91E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC3610121BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS AppTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +569,7 @@
 				CC3610141BC0E0E6001B91E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC3610151BC0E0E6001B91E8 /* Build configuration list for PBXNativeTarget "Snowcialite iOS AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +578,7 @@
 				CC3610171BC0E0E6001B91E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
