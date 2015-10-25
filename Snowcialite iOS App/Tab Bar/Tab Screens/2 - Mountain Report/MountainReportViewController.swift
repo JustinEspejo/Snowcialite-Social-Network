@@ -1,6 +1,7 @@
 //
 //  MountainReportViewController.swift
 //  Snowcialite iOS App
+
 //
 //  Created by Deniz Turgut on 10/4/15.
 //  Copyright © 2015 Snowcialite. All rights reserved.
@@ -8,25 +9,25 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
-class MountainReportViewController: UIViewController {
-    
-    var weatherBaseURL = "http://api.openweathermap.org/data/2.5/weather"
-    var baseURL = "http://localhost:8081/SpringMVC/rest"
-    var serviceRoute = "/user/"
+class MountainReportViewController: UIViewController, UITextFieldDelegate
+{
+    //storyboard reference variables
     @IBOutlet weak var getCurrentTempButton: UIButton!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var cityTemperatureLabel: UILabel!
-    @IBOutlet weak var getFunctionButton: UIButton!
-    @IBOutlet weak var postFunctionButton: UIButton!
     
+    //class variables
+    var weatherBaseURL = "http://api.openweathermap.org/data/2.5/weather"
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        dispatch_async(dispatch_get_main_queue(),{
-            self.getWeatherData()
-        })
+        cityTextField.delegate = self
+        
+        getWeatherData()
     }
     
     override func didReceiveMemoryWarning()
@@ -37,17 +38,14 @@ class MountainReportViewController: UIViewController {
     
     func getWeatherData()
     {
-        Alamofire.request(.GET, weatherBaseURL, parameters: ["q": cityTextField.text!, "APPID": "1a86e8933e6b874cedca14f2842a54c8"]).responseJSON
-            { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value
-                {
-                    print("JSON: \(JSON)")
-                }
+        Alamofire.request(.GET, weatherBaseURL, parameters: ["q": cityTextField.text!, "APPID": "6be1b1956ac65ae6ed8ac3fa17402547", "units": "imperial"]).responseJSON
+        { response in
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.result)   // result of response serialization
+
+            let json = JSON(response.result.value!)
+            self.cityTemperatureLabel.text = json["main"]["temp"].stringValue + "° F"
         }
         
         print("getFunctionButtonTapped")
@@ -57,41 +55,27 @@ class MountainReportViewController: UIViewController {
     {
         getWeatherData()
     }
-    
-    @IBAction func getFunctionButtonTapped(sender: AnyObject)
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
     {
-        Alamofire.request(.GET, baseURL + serviceRoute + "Deniz", parameters: nil).responseJSON
-        { response in
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
+        if segue.identifier == "showNextScreen"
+        {
+            let vc = segue.destinationViewController as! ViewController2
             
-            if let JSON = response.result.value
-            {
-                print("JSON: \(JSON)")
-            }
+            vc.sampleString = "This is how you set a string for a view controller before you push it!"
         }
-        
-        print("getFunctionButtonTapped")
     }
     
-    @IBAction func postFunctionButtonTapped(sender: AnyObject)
+    func textFieldShouldReturn(textField: UITextField) -> Bool
     {
-        Alamofire.request(.GET, baseURL + serviceRoute + "Deniz", parameters: nil).responseJSON
-        { response in
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value
-            {
-                print("JSON: \(JSON)")
-            }
-        }
+        textField.resignFirstResponder()
         
-        print("postFunctionButtonTapped")
+        dispatch_async(dispatch_get_main_queue(),
+        {
+            self.getWeatherData()
+        })
+        
+        return true
     }
 }
 
