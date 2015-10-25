@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B6615F496C93A8AC5811AC3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B49EFC162E0FE9EDDFB57D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1F2F32AF1BDC98BD0025C2DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F32A91BDC98BD0025C2DC /* Assets.xcassets */; };
+		1F2F32B01BDC98BD0025C2DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F32AA1BDC98BD0025C2DC /* LaunchScreen.storyboard */; };
+		1F2F32B11BDC98BD0025C2DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2F32AC1BDC98BD0025C2DC /* Main.storyboard */; };
+		1F2F32B71BDC9C0C0025C2DC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F32B51BDC9C0C0025C2DC /* TabBarViewController.swift */; };
+		1F2F32B81BDC9C0C0025C2DC /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F32B61BDC9C0C0025C2DC /* ViewController2.swift */; };
+		1F2F32C41BDC9CD30025C2DC /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F32BB1BDC9CD30025C2DC /* NewsFeedViewController.swift */; };
+		1F2F32C51BDC9CD30025C2DC /* MountainReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F32BD1BDC9CD30025C2DC /* MountainReportViewController.swift */; };
+		1F2F32C61BDC9CD30025C2DC /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F32BF1BDC9CD30025C2DC /* UserProfileViewController.swift */; };
+		1F2F32C71BDC9CD30025C2DC /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F32C11BDC9CD30025C2DC /* NotificationsViewController.swift */; };
+		1F2F32C81BDC9CD30025C2DC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2F32C31BDC9CD30025C2DC /* SettingsViewController.swift */; };
+		9982B3D6923F293F7F93090D /* Pods_Snowcialite_iOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FD729DDA54038ED8F88F47 /* Pods_Snowcialite_iOS_App.framework */; };
 		CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */; };
-		CC360FED1BC0E0E6001B91E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FEC1BC0E0E6001B91E8 /* ViewController.swift */; };
-		CC360FF01BC0E0E6001B91E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC360FEE1BC0E0E6001B91E8 /* Main.storyboard */; };
-		CC360FF21BC0E0E6001B91E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC360FF11BC0E0E6001B91E8 /* Assets.xcassets */; };
-		CC360FF51BC0E0E6001B91E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC360FF31BC0E0E6001B91E8 /* LaunchScreen.storyboard */; };
 		CC3610001BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FFF1BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift */; };
 		CC36100B1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */; };
 /* End PBXBuildFile section */
@@ -35,22 +41,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		90B49EFC162E0FE9EDDFB57D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F2F32A91BDC98BD0025C2DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F2F32AB1BDC98BD0025C2DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F2F32AD1BDC98BD0025C2DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F2F32AE1BDC98BD0025C2DC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F2F32B51BDC9C0C0025C2DC /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "Tab Bar/TabBarViewController.swift"; sourceTree = "<group>"; };
+		1F2F32B61BDC9C0C0025C2DC /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController2.swift; path = "Tab Bar/ViewController2.swift"; sourceTree = "<group>"; };
+		1F2F32BB1BDC9CD30025C2DC /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		1F2F32BD1BDC9CD30025C2DC /* MountainReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainReportViewController.swift; sourceTree = "<group>"; };
+		1F2F32BF1BDC9CD30025C2DC /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		1F2F32C11BDC9CD30025C2DC /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		1F2F32C31BDC9CD30025C2DC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8C3D44E6CA1B631C338C64AF /* Pods-Snowcialite iOS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snowcialite iOS App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snowcialite iOS App/Pods-Snowcialite iOS App.release.xcconfig"; sourceTree = "<group>"; };
+		BB341C5E83B4146D9A581309 /* Pods-Snowcialite iOS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snowcialite iOS App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snowcialite iOS App/Pods-Snowcialite iOS App.debug.xcconfig"; sourceTree = "<group>"; };
 		CC360FE71BC0E0E6001B91E8 /* Snowcialite iOS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snowcialite iOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC360FEC1BC0E0E6001B91E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC360FEF1BC0E0E6001B91E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC360FF11BC0E0E6001B91E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC360FF41BC0E0E6001B91E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CC360FF61BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC360FFB1BC0E0E6001B91E8 /* Snowcialite iOS AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowcialite iOS AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC360FFF1BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snowcialite_iOS_AppTests.swift; sourceTree = "<group>"; };
 		CC3610011BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3610061BC0E0E6001B91E8 /* Snowcialite iOS AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snowcialite iOS AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snowcialite_iOS_AppUITests.swift; sourceTree = "<group>"; };
 		CC36100C1BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1850D712D1486B7E68FA8BA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F937392DA7AC0AC4F409BF9B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E7FD729DDA54038ED8F88F47 /* Pods_Snowcialite_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snowcialite_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B6615F496C93A8AC5811AC3 /* Pods.framework in Frameworks */,
+				9982B3D6923F293F7F93090D /* Pods_Snowcialite_iOS_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +91,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2F32961BDC97370025C2DC /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F32B51BDC9C0C0025C2DC /* TabBarViewController.swift */,
+				1F2F32B61BDC9C0C0025C2DC /* ViewController2.swift */,
+				1F2F32B91BDC9CD30025C2DC /* Tab Screens */,
+			);
+			name = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		1F2F32A81BDC98BD0025C2DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F32A91BDC98BD0025C2DC /* Assets.xcassets */,
+				1F2F32AA1BDC98BD0025C2DC /* LaunchScreen.storyboard */,
+				1F2F32AC1BDC98BD0025C2DC /* Main.storyboard */,
+				1F2F32AE1BDC98BD0025C2DC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F2F32B91BDC9CD30025C2DC /* Tab Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F32BA1BDC9CD30025C2DC /* 1 - News Feed */,
+				1F2F32BC1BDC9CD30025C2DC /* 2 - Mountain Report */,
+				1F2F32BE1BDC9CD30025C2DC /* 3 - User Profile */,
+				1F2F32C01BDC9CD30025C2DC /* 4 - Notifications */,
+				1F2F32C21BDC9CD30025C2DC /* 5 - Settings */,
+			);
+			name = "Tab Screens";
+			path = "Tab Bar/Tab Screens";
+			sourceTree = "<group>";
+		};
+		1F2F32BA1BDC9CD30025C2DC /* 1 - News Feed */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F32BB1BDC9CD30025C2DC /* NewsFeedViewController.swift */,
+			);
+			path = "1 - News Feed";
+			sourceTree = "<group>";
+		};
+		1F2F32BC1BDC9CD30025C2DC /* 2 - Mountain Report */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F32BD1BDC9CD30025C2DC /* MountainReportViewController.swift */,
+			);
+			path = "2 - Mountain Report";
+			sourceTree = "<group>";
+		};
+		1F2F32BE1BDC9CD30025C2DC /* 3 - User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F32BF1BDC9CD30025C2DC /* UserProfileViewController.swift */,
+			);
+			path = "3 - User Profile";
+			sourceTree = "<group>";
+		};
+		1F2F32C01BDC9CD30025C2DC /* 4 - Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F32C11BDC9CD30025C2DC /* NotificationsViewController.swift */,
+			);
+			path = "4 - Notifications";
+			sourceTree = "<group>";
+		};
+		1F2F32C21BDC9CD30025C2DC /* 5 - Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1F2F32C31BDC9CD30025C2DC /* SettingsViewController.swift */,
+			);
+			path = "5 - Settings";
+			sourceTree = "<group>";
+		};
 		84999543058872F766EB2F21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				90B49EFC162E0FE9EDDFB57D /* Pods.framework */,
+				E7FD729DDA54038ED8F88F47 /* Pods_Snowcialite_iOS_App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB26044C5594F54649A2CF3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB341C5E83B4146D9A581309 /* Pods-Snowcialite iOS App.debug.xcconfig */,
+				8C3D44E6CA1B631C338C64AF /* Pods-Snowcialite iOS App.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CC360FDE1BC0E0E6001B91E8 = {
@@ -94,8 +189,8 @@
 				CC360FFE1BC0E0E6001B91E8 /* Snowcialite iOS AppTests */,
 				CC3610091BC0E0E6001B91E8 /* Snowcialite iOS AppUITests */,
 				CC360FE81BC0E0E6001B91E8 /* Products */,
-				F0BAC1B08C9356197D7AA551 /* Pods */,
 				84999543058872F766EB2F21 /* Frameworks */,
+				BB26044C5594F54649A2CF3D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,11 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */,
-				CC360FEC1BC0E0E6001B91E8 /* ViewController.swift */,
-				CC360FEE1BC0E0E6001B91E8 /* Main.storyboard */,
-				CC360FF11BC0E0E6001B91E8 /* Assets.xcassets */,
-				CC360FF31BC0E0E6001B91E8 /* LaunchScreen.storyboard */,
-				CC360FF61BC0E0E6001B91E8 /* Info.plist */,
+				1F2F32A81BDC98BD0025C2DC /* Supporting Files */,
+				1F2F32961BDC97370025C2DC /* Tab Bar */,
 			);
 			path = "Snowcialite iOS App";
 			sourceTree = "<group>";
@@ -138,15 +230,6 @@
 				CC36100C1BC0E0E6001B91E8 /* Info.plist */,
 			);
 			path = "Snowcialite iOS AppUITests";
-			sourceTree = "<group>";
-		};
-		F0BAC1B08C9356197D7AA551 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F1850D712D1486B7E68FA8BA /* Pods.debug.xcconfig */,
-				F937392DA7AC0AC4F409BF9B /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +297,7 @@
 		CC360FDF1BC0E0E6001B91E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Snowcialite;
 				TargetAttributes = {
 					CC360FE61BC0E0E6001B91E8 = {
@@ -255,9 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC360FF51BC0E0E6001B91E8 /* LaunchScreen.storyboard in Resources */,
-				CC360FF21BC0E0E6001B91E8 /* Assets.xcassets in Resources */,
-				CC360FF01BC0E0E6001B91E8 /* Main.storyboard in Resources */,
+				1F2F32B11BDC98BD0025C2DC /* Main.storyboard in Resources */,
+				1F2F32AF1BDC98BD0025C2DC /* Assets.xcassets in Resources */,
+				1F2F32B01BDC98BD0025C2DC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snowcialite iOS App/Pods-Snowcialite iOS App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1C0826E3E3D9E6E36924A1CA /* Check Pods Manifest.lock */ = {
@@ -320,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snowcialite iOS App/Pods-Snowcialite iOS App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -330,8 +413,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC360FED1BC0E0E6001B91E8 /* ViewController.swift in Sources */,
+				1F2F32B81BDC9C0C0025C2DC /* ViewController2.swift in Sources */,
+				1F2F32C41BDC9CD30025C2DC /* NewsFeedViewController.swift in Sources */,
+				1F2F32C71BDC9CD30025C2DC /* NotificationsViewController.swift in Sources */,
+				1F2F32C51BDC9CD30025C2DC /* MountainReportViewController.swift in Sources */,
 				CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */,
+				1F2F32B71BDC9C0C0025C2DC /* TabBarViewController.swift in Sources */,
+				1F2F32C81BDC9CD30025C2DC /* SettingsViewController.swift in Sources */,
+				1F2F32C61BDC9CD30025C2DC /* UserProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,20 +456,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CC360FEE1BC0E0E6001B91E8 /* Main.storyboard */ = {
+		1F2F32AA1BDC98BD0025C2DC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC360FEF1BC0E0E6001B91E8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CC360FF31BC0E0E6001B91E8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC360FF41BC0E0E6001B91E8 /* Base */,
+				1F2F32AB1BDC98BD0025C2DC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1F2F32AC1BDC98BD0025C2DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F2F32AD1BDC98BD0025C2DC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -471,10 +560,11 @@
 		};
 		CC3610101BC0E0E6001B91E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1850D712D1486B7E68FA8BA /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BB341C5E83B4146D9A581309 /* Pods-Snowcialite iOS App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Snowcialite iOS App/Info.plist";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = "$(SRCROOT)/Snowcialite iOS App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowcialite.Snowcialite-iOS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,10 +573,11 @@
 		};
 		CC3610111BC0E0E6001B91E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F937392DA7AC0AC4F409BF9B /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8C3D44E6CA1B631C338C64AF /* Pods-Snowcialite iOS App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Snowcialite iOS App/Info.plist";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				INFOPLIST_FILE = "$(SRCROOT)/Snowcialite iOS App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowcialite.Snowcialite-iOS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";

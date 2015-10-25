@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bjw-1b-UJX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mountain Report-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MountainReportViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9uA-vF-yvd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiM-5s-fy6">
+                                <rect key="frame" x="239" y="136" width="123" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Get Current Temp"/>
+                                <connections>
+                                    <action selector="getCurrentTempButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNs-qn-hkm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uk-i4-qre">
+                                <rect key="frame" x="237" y="285" width="126" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Show Next Screen"/>
+                                <connections>
+                                    <segue destination="1OR-zg-sp9" kind="show" id="Mxx-vh-l2I"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHf-mj-A2L">
+                                <rect key="frame" x="140" y="84" width="320" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New York" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzz-Rl-Cg5">
+                                        <rect key="frame" x="8" y="8" width="152" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="152" id="5ED-71-xjZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Loading...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="121-c2-HyR">
+                                        <rect key="frame" x="175" y="12" width="80" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Tzz-Rl-Cg5" firstAttribute="leading" secondItem="aHf-mj-A2L" secondAttribute="leading" constant="8" id="Ko7-K4-QWy"/>
+                                    <constraint firstItem="121-c2-HyR" firstAttribute="leading" secondItem="Tzz-Rl-Cg5" secondAttribute="trailing" constant="15" id="ZVF-lW-Vac"/>
+                                    <constraint firstAttribute="trailing" secondItem="121-c2-HyR" secondAttribute="trailing" constant="65" id="Zdi-co-fWm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.1097861842" green="0.68235294120000001" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0uk-i4-qre" firstAttribute="centerY" secondItem="9uA-vF-yvd" secondAttribute="centerY" id="5Vi-oS-oeq"/>
+                            <constraint firstItem="xiM-5s-fy6" firstAttribute="centerX" secondItem="9uA-vF-yvd" secondAttribute="centerX" id="5eb-Ok-J47"/>
+                            <constraint firstItem="aHf-mj-A2L" firstAttribute="centerX" secondItem="9uA-vF-yvd" secondAttribute="centerX" id="V8i-Cx-tWw"/>
+                            <constraint firstItem="0uk-i4-qre" firstAttribute="centerX" secondItem="xiM-5s-fy6" secondAttribute="centerX" id="fHA-65-0q9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mountain Report" image="mountain" id="DXm-nI-sR5"/>
+                    <navigationItem key="navigationItem" title="Mountain Report" id="fRE-Ik-BEh"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cityTemperatureLabel" destination="121-c2-HyR" id="MEc-3Z-NgJ"/>
+                        <outlet property="cityTextField" destination="Tzz-Rl-Cg5" id="fyo-Lb-E15"/>
+                        <outlet property="getCurrentTempButton" destination="xiM-5s-fy6" id="sXh-E5-l02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="-307"/>
+        </scene>
+        <!--User Profile-->
+        <scene sceneID="BCx-QY-aTn">
+            <objects>
+                <viewController id="G9d-IB-YJf" customClass="UserProfileViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WPy-SP-Pbi"/>
+                        <viewControllerLayoutGuide type="bottom" id="R7B-aN-lST"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SO2-lc-qYt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbH-Sl-ACo">
+                                <rect key="frame" x="237" y="350" width="126" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Show Next Screen"/>
+                                <connections>
+                                    <segue destination="dwV-S1-NFh" kind="show" identifier="showNextScreen" id="gZ7-Zq-uCl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRO-86-QHY">
+                                <rect key="frame" x="250" y="147" width="100" height="30"/>
+                                <animations/>
+                                <state key="normal" title="'GET' Function"/>
+                                <connections>
+                                    <action selector="getFunctionButtonTapped:" destination="G9d-IB-YJf" eventType="touchUpInside" id="FMn-ss-Wsp"/>
+                                    <action selector="getFunctionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k1S-Pm-Za2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMy-z2-WAr">
+                                <rect key="frame" x="245" y="280" width="110" height="30"/>
+                                <animations/>
+                                <state key="normal" title="'POST' Function"/>
+                                <connections>
+                                    <action selector="postFunctionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eem-8n-lha"/>
+                                    <action selector="postFunctionButtonTapped:" destination="G9d-IB-YJf" eventType="touchUpInside" id="pNZ-yI-JQY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AbH-Sl-ACo" firstAttribute="centerX" secondItem="cMy-z2-WAr" secondAttribute="centerX" id="43w-hf-711"/>
+                            <constraint firstItem="cMy-z2-WAr" firstAttribute="centerX" secondItem="SRO-86-QHY" secondAttribute="centerX" id="70K-VS-G3p"/>
+                            <constraint firstItem="AbH-Sl-ACo" firstAttribute="centerX" secondItem="SO2-lc-qYt" secondAttribute="centerX" id="I4v-eI-Dmx"/>
+                            <constraint firstItem="R7B-aN-lST" firstAttribute="top" secondItem="AbH-Sl-ACo" secondAttribute="bottom" constant="171" id="d4k-BC-lUt"/>
+                            <constraint firstItem="AbH-Sl-ACo" firstAttribute="top" secondItem="cMy-z2-WAr" secondAttribute="bottom" constant="40" id="f2g-jQ-Xr5"/>
+                            <constraint firstItem="SRO-86-QHY" firstAttribute="top" secondItem="WPy-SP-Pbi" secondAttribute="bottom" constant="83" id="rkA-4D-gSj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="User Profile" image="id-card" id="sby-gp-lIw"/>
+                    <navigationItem key="navigationItem" title="User Profile" id="jEr-xb-rpo"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="getFunctionButton" destination="SRO-86-QHY" id="EOh-gB-q3U"/>
+                        <outlet property="nextScreenButton" destination="AbH-Sl-ACo" id="N7n-MH-KwX"/>
+                        <outlet property="postFunctionButton" destination="cMy-z2-WAr" id="RxB-ba-aSQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WL7-1S-3bg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="356"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="WlQ-jh-el1">
+            <objects>
+                <viewController id="unV-1n-Aof" customClass="SettingsViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ep8-7F-H6L"/>
+                        <viewControllerLayoutGuide type="bottom" id="6CZ-u0-Qwg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qhr-Je-dbP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="56w-7L-uie">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="unV-1n-Aof" id="9cf-FP-Hyc"/>
+                                    <outlet property="delegate" destination="unV-1n-Aof" id="FM4-Ed-ctc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6CZ-u0-Qwg" firstAttribute="top" secondItem="56w-7L-uie" secondAttribute="bottom" id="Deu-hb-Thx"/>
+                            <constraint firstItem="56w-7L-uie" firstAttribute="top" secondItem="ep8-7F-H6L" secondAttribute="bottom" id="SVA-LX-9f8"/>
+                            <constraint firstItem="56w-7L-uie" firstAttribute="leading" secondItem="Qhr-Je-dbP" secondAttribute="leadingMargin" constant="-20" id="h6o-XA-aGB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="56w-7L-uie" secondAttribute="trailing" constant="-20" id="jjH-EV-nzh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="spanner" id="ZlQ-Rn-ji1"/>
+                    <navigationItem key="navigationItem" title="Settings" id="Mrx-9C-gQa"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="56w-7L-uie" id="q7q-jZ-h2B"/>
+                        <segue destination="FYn-Qc-uja" kind="show" identifier="showNextScreen" id="SrD-L2-WtT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MHX-Aq-kq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="1819"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="KAB-3K-Xo4">
+            <objects>
+                <viewController id="rp8-i7-lFo" customClass="NotificationsViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lfh-8J-m51"/>
+                        <viewControllerLayoutGuide type="bottom" id="hkb-mh-adH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="En8-Vz-9Bq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bwv-1v-bsk">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rp8-i7-lFo" id="cv3-YH-NeX"/>
+                                    <outlet property="delegate" destination="rp8-i7-lFo" id="AJM-xG-rqe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hkb-mh-adH" firstAttribute="top" secondItem="Bwv-1v-bsk" secondAttribute="bottom" id="Jyc-N1-Bl3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bwv-1v-bsk" secondAttribute="trailing" constant="-20" id="kJW-Dk-dIT"/>
+                            <constraint firstItem="Bwv-1v-bsk" firstAttribute="leading" secondItem="En8-Vz-9Bq" secondAttribute="leadingMargin" constant="-20" id="lhL-tb-MWU"/>
+                            <constraint firstItem="Bwv-1v-bsk" firstAttribute="top" secondItem="lfh-8J-m51" secondAttribute="bottom" id="tva-Te-kv0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="earth-usa" id="oEn-sz-6wS"/>
+                    <navigationItem key="navigationItem" title="Notifications" id="BpX-2N-Wib"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Bwv-1v-bsk" id="iEs-Ls-VJS"/>
+                        <segue destination="h9t-di-vme" kind="show" identifier="showNextScreen" id="iVc-pt-YqL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g58-Eb-pzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="1069"/>
+        </scene>
+        <!--News Feed-->
+        <scene sceneID="Stj-Np-7vK">
+            <objects>
+                <navigationController id="PWA-84-X3R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News Feed" image="newspaper" id="Sl8-bX-xmm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="var-RU-GFZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rjo-qh-JsM" kind="relationship" relationship="rootViewController" id="X08-iD-mIh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40v-dB-9Bt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="-1045"/>
+        </scene>
+        <!--News Feed-->
+        <scene sceneID="oQp-xb-80u">
+            <objects>
+                <viewController id="rjo-qh-JsM" customClass="NewsFeedViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bei-Nn-G1i"/>
+                        <viewControllerLayoutGuide type="bottom" id="UBY-z8-Snd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OS3-5L-4Zz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2c8-9h-Psf">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rjo-qh-JsM" id="9KJ-e6-aR7"/>
+                                    <outlet property="delegate" destination="rjo-qh-JsM" id="NnH-zR-Ffc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2c8-9h-Psf" firstAttribute="top" secondItem="Bei-Nn-G1i" secondAttribute="bottom" id="3cm-ph-UJq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2c8-9h-Psf" secondAttribute="trailing" constant="-20" id="BPW-3h-Ta2"/>
+                            <constraint firstItem="UBY-z8-Snd" firstAttribute="top" secondItem="2c8-9h-Psf" secondAttribute="bottom" id="cU4-p8-7tI"/>
+                            <constraint firstItem="2c8-9h-Psf" firstAttribute="leading" secondItem="OS3-5L-4Zz" secondAttribute="leadingMargin" constant="-20" id="zvx-Zj-Oz5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News Feed" image="newspaper" id="3V7-nr-kIL"/>
+                    <navigationItem key="navigationItem" title="News Feed" id="VZd-kG-kfe"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="2c8-9h-Psf" id="ZWp-Ty-wbd"/>
+                        <segue destination="sc4-zG-saa" kind="show" identifier="showNextScreen" id="717-ww-JSn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKO-B3-F60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="-1045"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="pRo-ek-dyS">
+            <objects>
+                <viewController id="sc4-zG-saa" customClass="ViewController2" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="afO-7g-jv8"/>
+                        <viewControllerLayoutGuide type="bottom" id="65R-dI-HOA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="356-Hh-Z2M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZh-Db-H9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="-1045"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SNC-Zu-ybG">
+            <objects>
+                <tabBarController id="Bjw-1b-UJX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="63j-ht-RL5"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="SyU-wt-2Wh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PWA-84-X3R" kind="relationship" relationship="viewControllers" id="Ozh-Qa-oew"/>
+                        <segue destination="ICY-ob-mOJ" kind="relationship" relationship="viewControllers" id="ugT-md-bGG"/>
+                        <segue destination="ZpB-LO-gtg" kind="relationship" relationship="viewControllers" id="vRd-y0-4Uq"/>
+                        <segue destination="L8T-tR-HMQ" kind="relationship" relationship="viewControllers" id="Ex9-cH-2Mh"/>
+                        <segue destination="wjk-EL-07h" kind="relationship" relationship="viewControllers" id="pSB-td-ZCN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePY-ds-gjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-829" y="1235"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="y33-GD-KFO">
+            <objects>
+                <viewController id="h9t-di-vme" customClass="ViewController2" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ZK-F6-H8Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="n2N-Rc-Rqr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vtr-p8-5DB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmN-rf-Jzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="1069"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="QpD-c9-zXl">
+            <objects>
+                <viewController id="FYn-Qc-uja" customClass="ViewController2" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5m7-Tz-Ir3"/>
+                        <viewControllerLayoutGuide type="bottom" id="1j3-Bc-WGJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d3D-qr-zSu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSX-SI-JZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="1819"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="2cr-n3-cbQ">
+            <objects>
+                <viewController id="dwV-S1-NFh" customClass="ViewController2" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Rz-dD-DIe"/>
+                        <viewControllerLayoutGuide type="bottom" id="7tb-JR-EAb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BNZ-bP-yCY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sS4-qN-Mxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="356"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="F5R-mv-2of">
+            <objects>
+                <viewController id="1OR-zg-sp9" customClass="ViewController2" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HcD-mB-ztd"/>
+                        <viewControllerLayoutGuide type="bottom" id="rT4-2T-jpR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yq7-9P-R10">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwG-qr-x31" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850" y="-307"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="iM1-td-lVY">
+            <objects>
+                <navigationController id="L8T-tR-HMQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="earth-usa" id="DNh-20-aFQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6De-R6-gCm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rp8-i7-lFo" kind="relationship" relationship="rootViewController" id="frZ-fB-lip"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZt-a0-uJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="1069"/>
+        </scene>
+        <!--User Profile-->
+        <scene sceneID="nJw-3o-rhC">
+            <objects>
+                <navigationController id="ZpB-LO-gtg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User Profile" image="id-card" id="cRz-pV-d2o"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6CF-5Q-sfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G9d-IB-YJf" kind="relationship" relationship="rootViewController" id="Oo5-l5-twC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whf-Vl-Shx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="356"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="dS4-SD-9DK">
+            <objects>
+                <navigationController id="wjk-EL-07h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="spanner" id="xt8-bL-xlM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mtc-KP-CyC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="unV-1n-Aof" kind="relationship" relationship="rootViewController" id="beH-nE-Sm6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rut-1p-9rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="1819"/>
+        </scene>
+        <!--Mountain Report-->
+        <scene sceneID="Xar-fH-yY1">
+            <objects>
+                <navigationController id="ICY-ob-mOJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mountain Report" image="mountain" id="nYe-iU-RiF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mi6-tk-lqg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FXi-0d-avp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjT-6E-Ggn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="-307"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="earth-usa" width="30" height="30"/>
+        <image name="id-card" width="30" height="30"/>
+        <image name="mountain" width="30" height="30"/>
+        <image name="newspaper" width="30" height="30"/>
+        <image name="spanner" width="30" height="30"/>
+    </resources>
+</document>

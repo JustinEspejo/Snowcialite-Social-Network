@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Snowcialite iOS App
 //
-//  Created by Syed Jilany on 10/4/15.
+//  Created by Deniz Turgut on 10/4/15.
 //  Copyright © 2015 Snowcialite. All rights reserved.
 //
 
