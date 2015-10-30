@@ -42,7 +42,7 @@ class UserProfileViewController: UIViewController
                 print(response.response) // URL response
                 print(response.result)   // result of response serialization
                 
-                var json = JSON(response.result.value!)
+               // var json = JSON(response.result.value!)
         }
         
         print("getFunctionButtonTapped")
@@ -56,7 +56,7 @@ class UserProfileViewController: UIViewController
                 print(response.response) // URL response
                 print(response.result)   // result of response serialization
                 
-                let json = JSON(response.result.value!)
+            //    let json = JSON(response.result.value!)
         }
         
         print("postFunctionButtonTapped")

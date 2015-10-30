@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Parse
+import Bolts
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(application: UIApplication,
+        
+            didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+       
+            // Initialize Parse.
+            Parse.setApplicationId("shcV06ansJj4bHcKJFjld61tp8yJnqId37CWKeDR",
+                clientKey: "uLxC5pvKoXaVlVcD7Qj3BTdmKRWTgQKrrhqaUJiX")
+
+//                let snowcialiteTest = PFObject(className: "snowCialiteClassTest")
+//                snowcialiteTest["testProperty"] = "test Value"
+//                snowcialiteTest.saveInBackgroundWithBlock { (success, error) -> Void in
+//                    if error == nil  {
+//                    print("successfuly save shit")
+//                    }
+//                }
+//                
+        
         return true
     }
 

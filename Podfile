@@ -5,6 +5,8 @@ use_frameworks!
 target 'Snowcialite iOS App' do
     pod 'Alamofire', '~> 3.0'
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    pod 'Parse'
+    pod 'ParseUI'
 end
 
 target 'Snowcialite iOS AppTests' do

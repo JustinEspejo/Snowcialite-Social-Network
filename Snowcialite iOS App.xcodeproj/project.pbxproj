@@ -21,6 +21,10 @@
 		CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */; };
 		CC3610001BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FFF1BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift */; };
 		CC36100B1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */; };
+		ED95F5EC1BE15EAB00DFC554 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95F5EB1BE15EAB00DFC554 /* MapViewController.swift */; };
+		EDB1B5FB1BE4079B007950EF /* newsFeedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */; };
+		EDB1B5FD1BE40DDA007950EF /* newsFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */; };
+		EDC683A51BE0158C00E43966 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC683A41BE0158C00E43966 /* LoginSignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snowcialite_iOS_AppUITests.swift; sourceTree = "<group>"; };
 		CC36100C1BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7FD729DDA54038ED8F88F47 /* Pods_Snowcialite_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snowcialite_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED95F5EB1BE15EAB00DFC554 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedTest.swift; sourceTree = "<group>"; };
+		EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		EDC683A41BE0158C00E43966 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginSignupViewController.swift; path = "../../../../Downloads/0. Snapchat_Starter/Snapchat/LoginSignupViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		1F2F32961BDC97370025C2DC /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
+				EDC683A41BE0158C00E43966 /* LoginSignupViewController.swift */,
 				1F2F32B51BDC9C0C0025C2DC /* TabBarViewController.swift */,
 				1F2F32B61BDC9C0C0025C2DC /* ViewController2.swift */,
 				1F2F32B91BDC9CD30025C2DC /* Tab Screens */,
@@ -128,6 +137,7 @@
 		1F2F32BA1BDC9CD30025C2DC /* 1 - News Feed */ = {
 			isa = PBXGroup;
 			children = (
+				EDB1B5F91BE4073B007950EF /* testNewsfeedAPI */,
 				1F2F32BB1BDC9CD30025C2DC /* NewsFeedViewController.swift */,
 			);
 			path = "1 - News Feed";
@@ -137,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2F32BD1BDC9CD30025C2DC /* MountainReportViewController.swift */,
+				ED95F5EB1BE15EAB00DFC554 /* MapViewController.swift */,
 			);
 			path = "2 - Mountain Report";
 			sourceTree = "<group>";
@@ -230,6 +241,15 @@
 				CC36100C1BC0E0E6001B91E8 /* Info.plist */,
 			);
 			path = "Snowcialite iOS AppUITests";
+			sourceTree = "<group>";
+		};
+		EDB1B5F91BE4073B007950EF /* testNewsfeedAPI */ = {
+			isa = PBXGroup;
+			children = (
+				EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */,
+				EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */,
+			);
+			name = testNewsfeedAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,10 +436,14 @@
 				1F2F32B81BDC9C0C0025C2DC /* ViewController2.swift in Sources */,
 				1F2F32C41BDC9CD30025C2DC /* NewsFeedViewController.swift in Sources */,
 				1F2F32C71BDC9CD30025C2DC /* NotificationsViewController.swift in Sources */,
+				ED95F5EC1BE15EAB00DFC554 /* MapViewController.swift in Sources */,
 				1F2F32C51BDC9CD30025C2DC /* MountainReportViewController.swift in Sources */,
+				EDC683A51BE0158C00E43966 /* LoginSignupViewController.swift in Sources */,
 				CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */,
 				1F2F32B71BDC9C0C0025C2DC /* TabBarViewController.swift in Sources */,
+				EDB1B5FB1BE4079B007950EF /* newsFeedTest.swift in Sources */,
 				1F2F32C81BDC9CD30025C2DC /* SettingsViewController.swift in Sources */,
+				EDB1B5FD1BE40DDA007950EF /* newsFeedCollectionViewCell.swift in Sources */,
 				1F2F32C61BDC9CD30025C2DC /* UserProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

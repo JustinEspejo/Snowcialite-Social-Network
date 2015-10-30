@@ -1,65 +1,97 @@
-//
-//  NewsFeedViewController.swift
-//  Snowcialite iOS App
-//
-//  Created by Deniz Tolga Turgut on 10/12/15.
-//  Copyright © 2015 Snowcialite. All rights reserved.
-//
+
 
 import UIKit
+import Parse
 
 class NewsFeedViewController: UIViewController
+    
 {
     //storyboard reference variables
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var logOutDidTap: UIBarButtonItem!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var profilePic: UIImageView!
+    //@IBOutlet weak var userProfileImageButton: UIbutton!
     
-    //class variables
-    var tableDataArray = ["Item 1", "Item 2"]
+    //test newsfeed
+    private var testNewsFeed = newsFeedTest.createNewsFeed()
+    
+    
+    //struct is like making a data object with variables already
+    struct Storyboard
+    {
+        //this is the identifier that i fuckin put in the fuckin storyboard shit
+        static let showLoginSegue = "Show Login"
+        static let showNextScreen = "showNextScreen"
+        static let cellIdentifier = "Newsfeed Cell"
+        
+    }
+    
+    
+    
+    @IBAction func logOutDidTap(sender: AnyObject) {
+        
+        PFUser.logOut()
+        self.performSegueWithIdentifier(Storyboard.showLoginSegue, sender: nil)
+        
+    }
+
+
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
-    {
-        return tableDataArray.count
-    }
-    
-    func tableView(tableView: UITableView!,
-        cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
-    {
-        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
         
-        cell.textLabel!.text = tableDataArray[indexPath.row]
+        //if no user pop this shit up (login)
+        if PFUser.currentUser() == nil
+        {
+            
+         performSegueWithIdentifier(Storyboard.showLoginSegue, sender: nil)
+        
+        }
+        
+        profilePic.layer.cornerRadius = profilePic.frame.size.width/2
+        profilePic.clipsToBounds = true
+        
+        
+    }
+    
+    //prepare for the next segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
+    {
+
+        if segue.identifier == Storyboard.showLoginSegue {
+            let loginSignupVC = segue.destinationViewController as! LoginSignupViewController
+            loginSignupVC.hidesBottomBarWhenPushed = true
+            loginSignupVC.navigationItem.hidesBackButton = true
+       
+        }
+    
+    }
+
+}
+
+extension NewsFeedViewController: UICollectionViewDataSource
+{
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return testNewsFeed.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.cellIdentifier, forIndexPath: indexPath) as! newsFeedCollectionViewCell
+        
+        cell.newsFeed = testNewsFeed[indexPath.item]
+        
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) //row clicked
-    {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell!.setSelected(false, animated: true)
-        
-        dispatch_async(dispatch_get_main_queue())
-        {
-            self.performSegueWithIdentifier("showNextScreen", sender: nil)
-        }
-    }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
-    {
-        if segue.identifier == "showNextScreen"
-        {
-            let vc = segue.destinationViewController as! ViewController2
-            
-            vc.sampleString = "This is how you set a string for a view controller before you push it!"
-        }
-    }
 }
