@@ -16,7 +16,7 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-    
+    @IBOutlet weak var viewLabel: UIView!
     //class variables
     var weatherBaseURL = "http://api.openweathermap.org/data/2.5/weather"
 
@@ -28,6 +28,11 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
         cityTextField.delegate = self
         
         getWeatherData()
+        
+        //why doesn't this work
+        viewLabel.layer.cornerRadius = 20
+        viewLabel.clipsToBounds = true
+
     }
 
     

@@ -10,7 +10,9 @@ class NewsFeedViewController: UIViewController
     @IBOutlet weak var logOutDidTap: UIBarButtonItem!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var profilePicButton: UIButton!
+    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var postStatusTextField: UITextField!
     //@IBOutlet weak var userProfileImageButton: UIbutton!
     
     //test newsfeed
@@ -35,13 +37,17 @@ class NewsFeedViewController: UIViewController
         self.performSegueWithIdentifier(Storyboard.showLoginSegue, sender: nil)
         
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        self.view.endEditing(true)
+    }
 
 
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         //if no user pop this shit up (login)
         if PFUser.currentUser() == nil
         {
@@ -50,8 +56,11 @@ class NewsFeedViewController: UIViewController
         
         }
         
-        profilePic.layer.cornerRadius = profilePic.frame.size.width/2
-        profilePic.clipsToBounds = true
+        profilePicButton.layer.cornerRadius = profilePicButton.frame.size.width/2
+        profilePicButton.clipsToBounds = true
+        
+        postButton.layer.cornerRadius = postButton.frame.size.width/2
+        postButton.clipsToBounds = true
         
         
     }
