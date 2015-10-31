@@ -32,7 +32,7 @@ class newsFeedTest
             
             newsFeedTest(title: "Snobord is gud sport", description: "rekT the trees today, the woods was GG", featuredImage: UIImage(named: "snobord")!),
             
-            newsFeedTest(title: "Denise jumped a few inches today, almost at my level", description: "I'd give it a 6/10", featuredImage: UIImage(named: "2")!),
+            newsFeedTest(title: "Denise jumped a few inches today, almost at my level -paolo", description: "I'd give it a 6/10", featuredImage: UIImage(named: "2")!),
             
             newsFeedTest(title: "Today is a good day", description: ":D", featuredImage: UIImage(named: "1")!),
             

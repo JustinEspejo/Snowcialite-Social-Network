@@ -26,6 +26,7 @@ class NewsFeedViewController: UIViewController
         static let showLoginSegue = "Show Login"
         static let showNextScreen = "showNextScreen"
         static let cellIdentifier = "Newsfeed Cell"
+        static let showLoginSequeNoAnimate = "No Animation"
         
     }
     
@@ -52,7 +53,7 @@ class NewsFeedViewController: UIViewController
         if PFUser.currentUser() == nil
         {
             
-         performSegueWithIdentifier(Storyboard.showLoginSegue, sender: nil)
+         performSegueWithIdentifier(Storyboard.showLoginSequeNoAnimate, sender: nil)
         
         }
         
@@ -74,6 +75,12 @@ class NewsFeedViewController: UIViewController
             loginSignupVC.hidesBottomBarWhenPushed = true
             loginSignupVC.navigationItem.hidesBackButton = true
        
+        }
+        
+        if segue.identifier == Storyboard.showLoginSequeNoAnimate {
+            let loginSignupVC = segue.destinationViewController as! LoginSignupViewController
+            loginSignupVC.hidesBottomBarWhenPushed = true
+            loginSignupVC.navigationItem.hidesBackButton = true
         }
     
     }

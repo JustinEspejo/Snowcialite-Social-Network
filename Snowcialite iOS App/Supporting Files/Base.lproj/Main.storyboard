@@ -388,6 +388,7 @@
                         <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </toolbar>
                     <connections>
                         <segue destination="rjo-qh-JsM" kind="relationship" relationship="rootViewController" id="X08-iD-mIh"/>
@@ -568,6 +569,7 @@
                         <outlet property="profilePicButton" destination="fhy-sv-ZvC" id="xpl-oh-HID"/>
                         <segue destination="RKs-uv-B6W" kind="show" identifier="Show Login" id="ZqT-iU-pY5"/>
                         <segue destination="sc4-zG-saa" kind="show" identifier="showNextScreen" id="f7A-Yc-ZMS"/>
+                        <segue destination="RKs-uv-B6W" kind="show" identifier="No Animation" animates="NO" id="tMe-jR-KdK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKO-B3-F60" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -599,12 +601,10 @@
             <objects>
                 <tabBarController id="Bjw-1b-UJX" customClass="TabBarViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="63j-ht-RL5"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="SyU-wt-2Wh">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="SyU-wt-2Wh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -820,6 +820,7 @@
         <image name="weatherBackground" width="930" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ZqT-iU-pY5"/>
         <segue reference="RdJ-rc-24w"/>
     </inferredMetricsTieBreakers>
 </document>
