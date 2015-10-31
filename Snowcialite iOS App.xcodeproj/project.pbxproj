@@ -24,7 +24,7 @@
 		ED95F5EC1BE15EAB00DFC554 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95F5EB1BE15EAB00DFC554 /* MapViewController.swift */; };
 		EDB1B5FB1BE4079B007950EF /* newsFeedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */; };
 		EDB1B5FD1BE40DDA007950EF /* newsFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */; };
-		EDC683A51BE0158C00E43966 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC683A41BE0158C00E43966 /* LoginSignupViewController.swift */; };
+		EDB1B5FF1BE55FC4007950EF /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB1B5FE1BE55FC4007950EF /* LoginSignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 		ED95F5EB1BE15EAB00DFC554 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedTest.swift; sourceTree = "<group>"; };
 		EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedCollectionViewCell.swift; sourceTree = "<group>"; };
-		EDC683A41BE0158C00E43966 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginSignupViewController.swift; path = "../../../../Downloads/0. Snapchat_Starter/Snapchat/LoginSignupViewController.swift"; sourceTree = "<group>"; };
+		EDB1B5FE1BE55FC4007950EF /* LoginSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginSignupViewController.swift; path = "Tab Bar/LoginSignupViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		1F2F32961BDC97370025C2DC /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
-				EDC683A41BE0158C00E43966 /* LoginSignupViewController.swift */,
+				EDB1B5FE1BE55FC4007950EF /* LoginSignupViewController.swift */,
 				1F2F32B51BDC9C0C0025C2DC /* TabBarViewController.swift */,
 				1F2F32B61BDC9C0C0025C2DC /* ViewController2.swift */,
 				1F2F32B91BDC9CD30025C2DC /* Tab Screens */,
@@ -137,8 +137,8 @@
 		1F2F32BA1BDC9CD30025C2DC /* 1 - News Feed */ = {
 			isa = PBXGroup;
 			children = (
-				EDB1B5F91BE4073B007950EF /* testNewsfeed */,
 				1F2F32BB1BDC9CD30025C2DC /* NewsFeedViewController.swift */,
+				EDB1B5F91BE4073B007950EF /* 1.1 Test Newsfeed */,
 			);
 			path = "1 - News Feed";
 			sourceTree = "<group>";
@@ -243,13 +243,13 @@
 			path = "Snowcialite iOS AppUITests";
 			sourceTree = "<group>";
 		};
-		EDB1B5F91BE4073B007950EF /* testNewsfeed */ = {
+		EDB1B5F91BE4073B007950EF /* 1.1 Test Newsfeed */ = {
 			isa = PBXGroup;
 			children = (
 				EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */,
 				EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */,
 			);
-			name = testNewsfeed;
+			name = "1.1 Test Newsfeed";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +438,7 @@
 				1F2F32C71BDC9CD30025C2DC /* NotificationsViewController.swift in Sources */,
 				ED95F5EC1BE15EAB00DFC554 /* MapViewController.swift in Sources */,
 				1F2F32C51BDC9CD30025C2DC /* MountainReportViewController.swift in Sources */,
-				EDC683A51BE0158C00E43966 /* LoginSignupViewController.swift in Sources */,
+				EDB1B5FF1BE55FC4007950EF /* LoginSignupViewController.swift in Sources */,
 				CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */,
 				1F2F32B71BDC9C0C0025C2DC /* TabBarViewController.swift in Sources */,
 				EDB1B5FB1BE4079B007950EF /* newsFeedTest.swift in Sources */,
