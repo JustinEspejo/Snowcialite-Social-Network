@@ -137,7 +137,7 @@
 		1F2F32BA1BDC9CD30025C2DC /* 1 - News Feed */ = {
 			isa = PBXGroup;
 			children = (
-				EDB1B5F91BE4073B007950EF /* testNewsfeedAPI */,
+				EDB1B5F91BE4073B007950EF /* testNewsfeed */,
 				1F2F32BB1BDC9CD30025C2DC /* NewsFeedViewController.swift */,
 			);
 			path = "1 - News Feed";
@@ -243,13 +243,13 @@
 			path = "Snowcialite iOS AppUITests";
 			sourceTree = "<group>";
 		};
-		EDB1B5F91BE4073B007950EF /* testNewsfeedAPI */ = {
+		EDB1B5F91BE4073B007950EF /* testNewsfeed */ = {
 			isa = PBXGroup;
 			children = (
 				EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */,
 				EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */,
 			);
-			name = testNewsfeedAPI;
+			name = testNewsfeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
