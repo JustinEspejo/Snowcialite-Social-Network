@@ -13,6 +13,7 @@ class NewsFeedViewController: UIViewController
     @IBOutlet weak var profilePicButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var postStatusTextField: UITextField!
+
     //@IBOutlet weak var userProfileImageButton: UIbutton!
     
     //test newsfeed
@@ -30,8 +31,7 @@ class NewsFeedViewController: UIViewController
         
     }
     
-    
-    
+ 
     @IBAction func logOutDidTap(sender: AnyObject) {
         
         PFUser.logOut()
@@ -88,12 +88,15 @@ class NewsFeedViewController: UIViewController
 }
 
 extension NewsFeedViewController: UICollectionViewDataSource
+    
 {
+    //initialize sections
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
     {
         return 1
     }
-    
+
+    //initialize rows
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return testNewsFeed.count
@@ -109,5 +112,13 @@ extension NewsFeedViewController: UICollectionViewDataSource
         return cell
     }
     
+    //this function is for ending editing since the big ass collection view was blocking the view controller. So when i click the collection view the editing stops and keyboard goes down. :3
+    func collectionView(collectionView: UICollectionView,
+        didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        
+        self.view.endEditing(true)
+    }
     
 }
+
