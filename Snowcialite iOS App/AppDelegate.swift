@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Initialize Parse.
             Parse.setApplicationId("shcV06ansJj4bHcKJFjld61tp8yJnqId37CWKeDR",
                 clientKey: "uLxC5pvKoXaVlVcD7Qj3BTdmKRWTgQKrrhqaUJiX")
-
+//
 //                let snowcialiteTest = PFObject(className: "snowCialiteClassTest1")
 //                snowcialiteTest["testProperty"] = "test Value"
 //                snowcialiteTest["testProperty1"] = "test Value2"

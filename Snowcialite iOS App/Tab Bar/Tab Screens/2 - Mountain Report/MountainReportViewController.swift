@@ -30,7 +30,9 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
         getWeatherData()
         
         //why doesn't this work
-        viewLabel.layer.cornerRadius = 20
+        
+        
+        viewLabel.layer.cornerRadius = 4
         viewLabel.clipsToBounds = true
 
     }
@@ -85,10 +87,5 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
         
         return true
     }
-    
-
-
-
-    
-   }
+}
 

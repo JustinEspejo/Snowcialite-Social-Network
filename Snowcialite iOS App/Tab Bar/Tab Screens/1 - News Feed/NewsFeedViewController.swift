@@ -31,6 +31,18 @@ class NewsFeedViewController: UIViewController
         
     }
     
+    
+    @IBAction func postButton(sender: AnyObject) {
+        
+                        let snowcialiteTest = PFObject(className: "status")
+                        snowcialiteTest["status"] = postStatusTextField.text
+                        snowcialiteTest.saveInBackgroundWithBlock { (success, error) -> Void in
+                            if error == nil  {
+                            print("successfuly save shit")
+                            }
+                        }
+        
+    }
  
     @IBAction func logOutDidTap(sender: AnyObject) {
         
