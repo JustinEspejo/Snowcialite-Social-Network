@@ -4,81 +4,93 @@ import UIKit
 import Parse
 
 class NewsFeedViewController: UIViewController
-    
 {
+    
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+                                    // Initializations //
+    
+    
     //storyboard reference variables
     @IBOutlet weak var logOutDidTap: UIBarButtonItem!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var profilePicButton: UIButton!
     @IBOutlet weak var postButton: UIButton!
-    @IBOutlet weak var postStatusTextField: UITextField!
-
-    //@IBOutlet weak var userProfileImageButton: UIbutton!
     
+    
+    
+
     //test newsfeed
     private var testNewsFeed = newsFeedTest.createNewsFeed()
+//    let user : User;
     
-    
-    //struct is like making a data object with variables already
+    //Identifiers
     struct Storyboard
     {
-        //this is the identifier that i fuckin put in the fuckin storyboard shit
         static let showLoginSegue = "Show Login"
         static let showNextScreen = "showNextScreen"
         static let cellIdentifier = "Newsfeed Cell"
         static let showLoginSequeNoAnimate = "No Animation"
+        static let showPost = "Show Post"
         
     }
     
     
-    @IBAction func postButton(sender: AnyObject) {
-        
-                        let snowcialiteTest = PFObject(className: "status")
-                        snowcialiteTest["status"] = postStatusTextField.text
-                        snowcialiteTest.saveInBackgroundWithBlock { (success, error) -> Void in
-                            if error == nil  {
-                            print("successfuly save shit")
-                            }
-                        }
-        
-    }
- 
-    @IBAction func logOutDidTap(sender: AnyObject) {
-        
-        PFUser.logOut()
-        self.performSegueWithIdentifier(Storyboard.showLoginSegue, sender: nil)
-        
-    }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
-    {
-        self.view.endEditing(true)
-    }
-
-
-    
+    // ---- When viewcontroller loads
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //if no user pop this shit up (login)
         if PFUser.currentUser() == nil
         {
             
-         performSegueWithIdentifier(Storyboard.showLoginSequeNoAnimate, sender: nil)
-        
+            performSegueWithIdentifier(Storyboard.showLoginSequeNoAnimate, sender: nil)
+            
         }
-        
-        profilePicButton.layer.cornerRadius = profilePicButton.frame.size.width/2
-        profilePicButton.clipsToBounds = true
-        
-        postButton.layer.cornerRadius = postButton.frame.size.width/2
-        postButton.clipsToBounds = true
+
         
         
     }
     
-    //prepare for the next segue
+    
+    override func viewWillAppear(animated: Bool) {
+        let user = User(userLoggedIn: PFUser.currentUser()!)
+        
+        let imageFile = user.profilePicture
+        imageFile.getDataInBackgroundWithBlock({ (imageData, error) -> Void in
+            if (error == nil) {
+                if let image = UIImage(data:imageData!){
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.profilePicButton.setImage(image, forState: .Normal)
+                        self.profilePicButton.layer.cornerRadius = self.profilePicButton.frame.size.width/2
+                        self.profilePicButton.clipsToBounds = true
+                    }}
+            }
+        })
+    }
+    
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+                                     // Buttons //
+    
+
+    
+    @IBAction func logOutDidTap(sender: AnyObject)
+    {
+        PFUser.logOut()
+        self.performSegueWithIdentifier(Storyboard.showLoginSegue, sender: nil)
+    }
+    
+    
+    
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+                                // Prepare for Segue //
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
     {
 
@@ -94,10 +106,22 @@ class NewsFeedViewController: UIViewController
             loginSignupVC.hidesBottomBarWhenPushed = true
             loginSignupVC.navigationItem.hidesBackButton = true
         }
+        
+        if segue.identifier == Storyboard.showPost {
+            let postVC = segue.destinationViewController as! PostViewController
+            postVC.hidesBottomBarWhenPushed = true
+            
+        }
     
     }
 
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+                              // COLLECTION VIEW SETUP DATA SOURCE//
 
 extension NewsFeedViewController: UICollectionViewDataSource
     
@@ -124,13 +148,6 @@ extension NewsFeedViewController: UICollectionViewDataSource
         return cell
     }
     
-    //this function is for ending editing since the big ass collection view was blocking the view controller. So when i click the collection view the editing stops and keyboard goes down. :3
-    func collectionView(collectionView: UICollectionView,
-        didSelectItemAtIndexPath indexPath: NSIndexPath)
-    {
-        
-        self.view.endEditing(true)
-    }
-    
 }
+
 

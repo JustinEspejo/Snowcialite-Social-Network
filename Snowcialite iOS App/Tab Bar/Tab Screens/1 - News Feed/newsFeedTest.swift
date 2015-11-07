@@ -23,8 +23,7 @@ class newsFeedTest
     self.description = description
     self.featuredImage = featuredImage
     
-        
-    }
+        }
     
     static func createNewsFeed() -> [newsFeedTest]
     {
@@ -40,11 +39,6 @@ class newsFeedTest
             
             newsFeedTest(title: "shredding with some noobs", description: "gg", featuredImage: UIImage(named: "4")!),
         
-        
         ]
-    
-    
     }
-    
-    
 }

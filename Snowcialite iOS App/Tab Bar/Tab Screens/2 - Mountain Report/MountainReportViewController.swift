@@ -38,27 +38,40 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
     }
 
     
-    func getWeatherData()
-    {
-        Alamofire.request(.GET, weatherBaseURL, parameters: ["q": cityTextField.text!, "APPID": "6be1b1956ac65ae6ed8ac3fa17402547", "units": "imperial"]).responseJSON
-        { response in
-            
-            let json = JSON(response.result.value!)
-            let a = round(json["main"]["temp"].floatValue).description
-            print(a + " json success")
-
-            self.cityLabel.text = json["name"].stringValue
-            self.cityTemperatureLabel.text = round(json["main"]["temp"].floatValue).description + "° F"
-            self.descriptionLabel.text = json["weather"]["description"].stringValue //description is currently not displaying because of API provider
-            self.windLabel.text = round(json["wind"]["speed"].floatValue).description + "mph"
-            self.snowLabel.text = json["rain"]["rain.3h"].stringValue + " inches" //snow is currently not displaying because of API provider
-            self.pressureLabel.text = round(json["main"]["pressure"].floatValue).description + "hPa"
-            self.humidityLabel.text = json["main"]["humidity"].stringValue + "%"
+    func getWeatherData() {
         
+        Alamofire.request(.GET, weatherBaseURL, parameters: ["q": self.cityTextField.text!, "APPID": "6be1b1956ac65ae6ed8ac3fa17402547", "units": "imperial"])
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    print("nice internet motha fuckaaaaa ☺️")
+                    let json = JSON(response.result.value!)
+                    let a = round(json["main"]["temp"].floatValue).description
+                    print(a + " json success")
+                    
+                    self.cityLabel.text = json["name"].stringValue
+                    self.cityTemperatureLabel.text = round(json["main"]["temp"].floatValue).description + "° F"
+                    self.descriptionLabel.text = json["weather"]["description"].stringValue //description is currently not displaying because of API provider
+                    self.windLabel.text = round(json["wind"]["speed"].floatValue).description + "mph"
+                    self.snowLabel.text = json["rain"]["rain.3h"].stringValue + " inches" //snow is currently not displaying because of API provider
+                    self.pressureLabel.text = round(json["main"]["pressure"].floatValue).description + "hPa"
+                    self.humidityLabel.text = json["main"]["humidity"].stringValue + "%"
+                    
+                case .Failure(let error):
+                    print(error)
+                    
+                    switch error.code
+                        {
+                    case NSURLErrorNotConnectedToInternet:
+                        print("No internet motha fuuckaaa get fios bitch 😷")
+                    default:
+                        print("its not your internet bro")
+                    }
+                }
         }
     }
-    
-    
+
     
     //this function is for hiding the keyboard text when we click outside the textfield
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)

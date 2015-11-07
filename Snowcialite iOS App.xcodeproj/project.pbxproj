@@ -22,6 +22,8 @@
 		CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FEA1BC0E0E6001B91E8 /* AppDelegate.swift */; };
 		CC3610001BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC360FFF1BC0E0E6001B91E8 /* Snowcialite_iOS_AppTests.swift */; };
 		CC36100B1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */; };
+		ED35EA4C1BE6E6FC004A9A4D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */; };
+		ED85E4AD1BEC0D9E00CCC06B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85E4AC1BEC0D9E00CCC06B /* User.swift */; };
 		ED95F5EC1BE15EAB00DFC554 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED95F5EB1BE15EAB00DFC554 /* MapViewController.swift */; };
 		EDB1B5FB1BE4079B007950EF /* newsFeedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */; };
 		EDB1B5FD1BE40DDA007950EF /* newsFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */; };
@@ -68,6 +70,8 @@
 		CC36100A1BC0E0E6001B91E8 /* Snowcialite_iOS_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snowcialite_iOS_AppUITests.swift; sourceTree = "<group>"; };
 		CC36100C1BC0E0E6001B91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7FD729DDA54038ED8F88F47 /* Pods_Snowcialite_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snowcialite_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		ED85E4AC1BEC0D9E00CCC06B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED95F5EB1BE15EAB00DFC554 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EDB1B5FA1BE4079B007950EF /* newsFeedTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedTest.swift; sourceTree = "<group>"; };
 		EDB1B5FC1BE40DDA007950EF /* newsFeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsFeedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2F32BB1BDC9CD30025C2DC /* NewsFeedViewController.swift */,
+				ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */,
 				EDB1B5F91BE4073B007950EF /* 1.1 Test Newsfeed */,
 			);
 			path = "1 - News Feed";
@@ -155,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2F32BF1BDC9CD30025C2DC /* UserProfileViewController.swift */,
+				ED85E4AC1BEC0D9E00CCC06B /* User.swift */,
 			);
 			path = "3 - User Profile";
 			sourceTree = "<group>";
@@ -444,8 +450,10 @@
 				1F2F32B81BDC9C0C0025C2DC /* ViewController2.swift in Sources */,
 				1F2F32C41BDC9CD30025C2DC /* NewsFeedViewController.swift in Sources */,
 				1F2F32C71BDC9CD30025C2DC /* NotificationsViewController.swift in Sources */,
+				ED35EA4C1BE6E6FC004A9A4D /* PostViewController.swift in Sources */,
 				ED95F5EC1BE15EAB00DFC554 /* MapViewController.swift in Sources */,
 				1F6B83301BE586E1006A6B07 /* LoginSignupViewController.swift in Sources */,
+				ED85E4AD1BEC0D9E00CCC06B /* User.swift in Sources */,
 				1F2F32C51BDC9CD30025C2DC /* MountainReportViewController.swift in Sources */,
 				CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */,
 				1F2F32B71BDC9C0C0025C2DC /* TabBarViewController.swift in Sources */,

@@ -1,30 +1,49 @@
 //
 //  UserProfileViewController.swift
 //  Snowcialite iOS App
-
 //
-//  Created by Deniz Turgut on 10/4/15.
+//  Created by Justin Espejo on 10/4/15.
 //  Copyright © 2015 Snowcialite. All rights reserved.
 //
 
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Parse
 
-class UserProfileViewController: UIViewController
+class UserProfileViewController: UIViewController, UINavigationControllerDelegate
+    
 {
     //storyboard reference variables
-    @IBOutlet weak var getFunctionButton: UIButton!
-    @IBOutlet weak var postFunctionButton: UIButton!
-    @IBOutlet weak var nextScreenButton: UIButton!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var profilePicViewImage: UIImageView!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var boardingStyleLabel: UILabel!
+    @IBOutlet weak var userCollectionViewCell: UICollectionView!
     
     //class variables
-    var baseURL = "http://localhost:8081/SpringMVC/rest"
-    var serviceRoute = "/user/"
+    var imagePicker = UIImagePickerController()
+    var pickedImage = UIImage()
+    var profilePicture = UIImage()
+    
+    struct Storyboard {
+    
+        static let showLoginSegue = "Show Login 2"
+        static let userCollectionViewCell = "User Cell"
+        
+    }
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        imagePicker.delegate = self
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        getProfilePicture ()
 
     }
     
@@ -34,42 +53,178 @@ class UserProfileViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func getFunctionButtonTapped(sender: AnyObject)
-    {
-        Alamofire.request(.GET, baseURL + serviceRoute + "Deniz", parameters: nil).responseJSON
-            { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.result)   // result of response serialization
-                
-               // var json = JSON(response.result.value!)
+
+    //----------CAMERA BUTTON PRESSED----------//
+    //----------------------------------------//
+    
+    func getProfilePicture (){
+        
+        let user = User(userLoggedIn: PFUser.currentUser()!)
+        
+        userNameLabel.text = user.userName
+        
+            if PFUser.currentUser() != nil{
+                let imageFile = user.profilePicture
+                imageFile.getDataInBackgroundWithBlock({ (imageData, error) -> Void in
+                    if (error == nil) {
+                        if let image = UIImage(data:imageData!){
+                            dispatch_async(dispatch_get_main_queue()) {
+                            self.profilePicViewImage.image = image
+                            }}
+                    }
+                })
         }
         
-        print("getFunctionButtonTapped")
+        }
+    
+    @IBAction func logOutDidTap(sender: AnyObject)
+    {
+        PFUser.logOut()
+        self.performSegueWithIdentifier(Storyboard.showLoginSegue, sender: nil)
+        
     }
     
-    @IBAction func postFunctionButtonTapped(sender: AnyObject)
-    {
-        Alamofire.request(.GET, baseURL + serviceRoute + "Deniz", parameters: nil).responseJSON
-            { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.result)   // result of response serialization
+    
+    @IBAction func cameraButtonTapped(sender: AnyObject) {
+        
+        if (UIImagePickerController.isSourceTypeAvailable(.Camera))
+        {
+            
+            if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil
+            {
                 
-            //    let json = JSON(response.result.value!)
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .Camera
+                imagePicker.cameraCaptureMode = .Photo
+                presentViewController(imagePicker, animated: true, completion: {})
+                
+                
+            } else
+                
+            {
+                alertNotification("Rear camera does not exist", message: "Cannot access camera")
+            }
+        } else
+            
+        {
+            alertNotification("Camera inaccessable", message: "Application cannot access the camera.")
         }
         
-        print("postFunctionButtonTapped")
     }
+
+    
+    
+    //----------MEDIA BUTTON PRESSED----------//
+    //----------------------------------------//
+    @IBAction func mediaButtonTapped(sender: AnyObject) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    func alertNotification (title: String, message: String)
+    {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
     {
-        if segue.identifier == "showNextScreen"
-        {
-            let vc = segue.destinationViewController as! ViewController2
+        
+        if segue.identifier == Storyboard.showLoginSegue {
+            let loginSignupVC = segue.destinationViewController as! LoginSignupViewController
+            loginSignupVC.hidesBottomBarWhenPushed = true
+            loginSignupVC.navigationItem.hidesBackButton = true
             
-            vc.sampleString = "This is how you set a string for a view controller before you push it!"
         }
+        
     }
+    
 }
+
+
+extension UserProfileViewController: UIImagePickerControllerDelegate
+    
+{
+    //Did finish picking / taking a picture
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        print("Got an image")
+        pickedImage = ((info[UIImagePickerControllerOriginalImage]) as? UIImage)!
+        imagePicker.dismissViewControllerAnimated(true, completion:
+            {
+               
+                let user = PFUser.currentUser()
+                let imageData = UIImageJPEGRepresentation(self.pickedImage, 0.5)
+                let parseImageFile = PFFile(name: "upload.jpg", data: imageData!)
+                user!["profilepic"] = parseImageFile
+                user!.saveInBackgroundWithBlock({ (success, error: NSError?) -> Void in
+                    if error == nil {
+                        
+//                        dont need this if getprofile works correctly
+                        dispatch_async(dispatch_get_main_queue()) {
+                    
+                            self.profilePicViewImage.image = self.pickedImage
+                            
+                        }
+                    }
+                    else
+                    {
+                        print(error)
+                    }
+                    
+                    }
+                )
+        })
+    }
+    
+
+    // Pussied out and canceled upload
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        print("User canceled image")
+        dismissViewControllerAnimated(true, completion: {
+            //if we want to do extra shit
+        })
+    }
+    
+    
+}
+//
+//    extension UserProfileViewController: UICollectionViewDataSource
+//        
+//    {
+//        //initialize sections
+//        func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+//        {
+//            return 1
+//        }
+//        
+//        //initialize rows
+//        func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+//        {
+//            return 10
+//        }
+//        
+//        func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+//        {
+//            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.userCollectionViewCell, forIndexPath: indexPath) as! newsFeedCollectionViewCell
+//            
+//           // cell.newsFeed = testNewsFeed[indexPath.item]
+//            
+//            
+//            return cell
+//        }
+//        
+//    }
+
+
+
+
+
 

@@ -7,6 +7,8 @@ import ParseUI
 class LoginSignupViewController: PFLogInViewController
 {
  
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +51,7 @@ class LoginSignupViewController: PFLogInViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+        
 }
 
 
@@ -60,7 +62,24 @@ extension LoginSignupViewController : PFSignUpViewControllerDelegate
     {
         dismissViewControllerAnimated(true, completion: nil) //since i poped the fuckin sign up i need this too because the shownewsfeed only pops the first shit under this stack
         print("Sign up success")
+        let user = PFUser.currentUser()
+        let image : UIImage = UIImage(named:"mario")!
+        let imageData = UIImageJPEGRepresentation(image, 0.5)
+        let parseImageFile = PFFile(name: "upload.jpg", data: imageData!)
+        user!["profilepic"] = parseImageFile
+        user!.saveInBackgroundWithBlock({ (success, error: NSError?) -> Void in
+            if error == nil {
+             
+            }
+            else
+            {
+                print(error)
+            }})
+            
+
         shownewsFeed()
+        
+        
     }
 }
 
