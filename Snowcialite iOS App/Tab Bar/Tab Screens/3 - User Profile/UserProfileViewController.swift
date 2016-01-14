@@ -19,7 +19,7 @@ class UserProfileViewController: UIViewController, UINavigationControllerDelegat
     
     private var testUser = UserProfileTest.createNewsFeed()
 
-    //storyboard reference variables
+    //storyboard reference variablesx`
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var profilePicViewImage: UIImageView!
