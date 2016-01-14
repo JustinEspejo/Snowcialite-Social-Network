@@ -44,7 +44,7 @@ class NewsFeedViewController: UIViewController
     override func viewWillAppear(animated: Bool)
     {
         User.sharedInstance().refreshUser()
-        print("GETTING HERE TO BLOCK AND WAIT TILL YOUR SLOW ASS DATA IS BACK MOTHA FUCKA")
+        print("GETTING HERE TO BLOCK AND WAIT")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateProfilePicture", name: "profilePictureReceived", object: nil)
         
     }
@@ -70,7 +70,7 @@ class NewsFeedViewController: UIViewController
         self.profilePicButton.setImage(image, forState: .Normal)
         self.profilePicButton.layer.cornerRadius = self.profilePicButton.frame.size.width/2
         self.profilePicButton.clipsToBounds = true
-        print("Thanks for the Data Nerd. ")
+        print("Thanks for the Data. ")
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "profilePictureReceived", object: nil)
     }
     

@@ -74,9 +74,9 @@ class UserProfileViewController: UIViewController, UINavigationControllerDelegat
     override func viewWillAppear(animated: Bool)
     {
         User.sharedInstance().refreshUser()
-        print("GETTING HERE TO BLOCK AND WAIT TILL DATA IS BACK MOTHA FUCKA")
+        print("GETTING HERE TO BLOCK AND WAIT TILL DATA IS BACK")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateProfilePicture", name: "profilePictureReceived", object: nil)
-        print("GETTING HERE TO BLOCK AND WAIT TILL POSTS IS BACK MOTHA FUCKA")
+        print("GETTING HERE TO BLOCK AND WAIT TILL POSTS IS BACK")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTableValues", name: "getPosts", object: nil)
         updatePosts()
         if(User.sharedInstance().didEdit){
@@ -117,8 +117,8 @@ class UserProfileViewController: UIViewController, UINavigationControllerDelegat
                                 if let image = UIImage(data:imageData!)
                                 {
                                     self.images.append(image)
-                                    print("this is the pregnaant",image)
-                                    print("I'M GIVING YOU THE NEKKID PICS MOTHA FUCKA, GO ON WITH YOUR SHIT")
+                                    print("this is the IMAGE",image)
+                                    print("I'M GIVING YOU THE PICS, GO ON WITH YOUR THING")
                                     self.userCollectionView.reloadData()
                                 }
                             }
@@ -165,7 +165,7 @@ class UserProfileViewController: UIViewController, UINavigationControllerDelegat
         userNameLabel.text = userNameString
         userNameString += " photo's"
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "profilePictureReceived", object: nil)
-        print("Thanks for the data nigga, I'm a free motha fucka")
+        print("Thanks for the data, I'm FREE")
 
     }
     
@@ -182,7 +182,7 @@ class UserProfileViewController: UIViewController, UINavigationControllerDelegat
                     let theStatus = object["status"] as! String
                     self.status.append(theStatus)
                 }
-                print("I'M GIVING YOU THE POSTS MOTHA FUCKA, GO ON WITH YOUR SHIT")
+                print("I'M GIVING YOU THE POSTS, GO ON SON")
                 NSNotificationCenter.defaultCenter().postNotificationName("getPosts", object: self)
             }
             else
@@ -194,7 +194,7 @@ class UserProfileViewController: UIViewController, UINavigationControllerDelegat
     
     func updateTableValues()
     {
-        print("Thanks for the posts nigga, I'm a free motha fucka")
+        print("Thanks for the posts!!")
         tableViewStatus = self.status
         userTableView.backgroundView = nil
         userTableView.backgroundColor = UIColor.clearColor()
@@ -301,7 +301,7 @@ extension UserProfileViewController: UIImagePickerControllerDelegate
     }
 
     
-    // Pussied out and canceled upload
+    // backed out and canceled upload
     func imagePickerControllerDidCancel(picker: UIImagePickerController)
     {
         print("User canceled image")

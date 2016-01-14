@@ -49,7 +49,7 @@ public class User: NSObject
                 if let image = UIImage(data:imageData!)
                 {
                     self.profilePicture = image
-                    print("I'M GIVING YOU THE DATA MOTHA FUCKA, GO ON WITH YOUR SHIT")
+                    print("I'M GIVING YOU THE DATA.")
                       NSNotificationCenter.defaultCenter().postNotificationName("profilePictureReceived", object: self)
                     
                 }
