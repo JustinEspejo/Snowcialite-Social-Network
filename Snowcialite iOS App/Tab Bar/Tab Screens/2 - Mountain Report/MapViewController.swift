@@ -24,24 +24,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
 
-    // Location Delegate methods 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // Location Delegate methods  
     
 }

@@ -20,26 +20,16 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
     //class variables
     var weatherBaseURL = "http://api.openweathermap.org/data/2.5/weather"
 
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         cityTextField.delegate = self
-        
         getWeatherData()
-        
-        //why doesn't this work
-        
-        
         viewLabel.layer.cornerRadius = 4
         viewLabel.clipsToBounds = true
-
     }
 
-    
     func getWeatherData() {
-        
         Alamofire.request(.GET, weatherBaseURL, parameters: ["q": self.cityTextField.text!, "APPID": "6be1b1956ac65ae6ed8ac3fa17402547", "units": "imperial"])
             .validate()
             .responseJSON { response in
@@ -49,7 +39,6 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
                     let json = JSON(response.result.value!)
                     let a = round(json["main"]["temp"].floatValue).description
                     print(a + " json success")
-                    
                     self.cityLabel.text = json["name"].stringValue
                     self.cityTemperatureLabel.text = round(json["main"]["temp"].floatValue).description + "° F"
                     self.descriptionLabel.text = json["weather"]["description"].stringValue //description is currently not displaying because of API provider
@@ -57,47 +46,38 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
                     self.snowLabel.text = json["rain"]["rain.3h"].stringValue + " inches" //snow is currently not displaying because of API provider
                     self.pressureLabel.text = round(json["main"]["pressure"].floatValue).description + "hPa"
                     self.humidityLabel.text = json["main"]["humidity"].stringValue + "%"
-                    
                 case .Failure(let error):
                     print(error)
-                    
                     switch error.code
                         {
-                    case NSURLErrorNotConnectedToInternet:
+                        case NSURLErrorNotConnectedToInternet:
                         print("No internet motha fuuckaaa get fios bitch 😷")
-                    default:
+                        default:
                         print("its not your internet bro")
                     }
                 }
         }
     }
 
-    
     //this function is for hiding the keyboard text when we click outside the textfield
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
     {
         self.view.endEditing(true)
     }
     
-    
     @IBAction func getCurrentTempButtonTapped(sender: AnyObject)
     {
-        
         getWeatherData()
         self.cityTextField.resignFirstResponder() //Unclicks the keyboard
-    
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool
-    
     {
         textField.resignFirstResponder()
-        
         dispatch_async(dispatch_get_main_queue(),
-            {
-                self.getWeatherData()
+        {
+            self.getWeatherData()
         })
-        
         return true
     }
 }

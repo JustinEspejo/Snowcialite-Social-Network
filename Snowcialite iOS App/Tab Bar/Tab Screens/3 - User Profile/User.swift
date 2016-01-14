@@ -8,52 +8,52 @@
 
 import Foundation
 import Parse
-class User {
 
-//    static let userInstance = User(userLoggedIn: PFUser.currentUser()!)
+var instance: User?
+
+public class User: NSObject
+{
+//  static let userInstance = User(userLoggedIn: PFUser.currentUser()!)
+    var userName = String()
+    var userID = String()
+    var profilePicture = UIImage()
+    var didEdit = false
     
-    var profilePicture : PFFile
-    var userName : String
-    var userID: String
-//    var photo : [UIImage] = []
-
+    public class func sharedInstance() -> User
+    {
+        if !(instance != nil)
+        {
+            instance = User()
+        }
+        return instance!
+    }
     
-    init(userLoggedIn : PFUser) {
-            print ("class initialized")
-            let user = userLoggedIn
-            self.userID = (PFUser.currentUser()?.objectId)!
-            self.userName = user["username"] as! String
-          self.profilePicture = user["profilepic"] as! PFFile
-
-
-
-//            self.userID = user["objectId"] as! String
-//        print(self.userID)
-        
-        // Assume PFObject *myPost was previously created.
-////        // Using PFQuery
-//        let query = PFQuery(className: "Images")
-//        query.whereKey("uploader", equalTo: PFUser.currentUser()!)
-//        query.findObjectsInBackgroundWithBlock {
-//            (photoFiles: [PFObject]?, error: NSError?) -> Void in
-//            // comments now contains the comments for myPost
-//            if photoFiles == nil {
-//            print("yuck")
-//            }
-//            else{
-//            for photoFile in photoFiles!
-//            {
-//                
-//                
-//                
-//            }
-//                print(self.photo)
-//            }
-//
-//        }
-//
-//        
-
-//        }
+    func clearUser()
+    {
+        self.userID = ""
+        self.userName = ""
+        self.profilePicture = (UIImage(named: "mario"))!
+        self.didEdit = true
+    }
+    
+    func refreshUser()
+    {
+        let user = PFUser.currentUser()!
+        self.userID = (PFUser.currentUser()?.objectId)!
+        self.userName = user["username"] as! String
+        let imageFile = (user["profilepic"] as! PFFile)
+        imageFile.getDataInBackgroundWithBlock(
+        { (imageData, error) -> Void in
+            if (error == nil)
+            {
+                if let image = UIImage(data:imageData!)
+                {
+                    self.profilePicture = image
+                    print("I'M GIVING YOU THE DATA MOTHA FUCKA, GO ON WITH YOUR SHIT")
+                      NSNotificationCenter.defaultCenter().postNotificationName("profilePictureReceived", object: self)
+                    
+                }
+            }
+        })
     }
 }

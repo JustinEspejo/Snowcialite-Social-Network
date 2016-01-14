@@ -20,76 +20,57 @@ class PostViewController: UIViewController, UITextViewDelegate, UINavigationCont
     @IBOutlet weak var postButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var imageCaption: UITextField!
+    @IBOutlet weak var userLabel: UILabel!
     
     //variables
     var imagePicker = UIImagePickerController()
     let pickedImage = UIImage()
     var imageExist = false
 
-    
-    
-    override func viewDidLoad(){
-        
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         textView.becomeFirstResponder()
         textView?.delegate = self
         textView.text = "How are you feeling?     "
         textView.textColor = UIColor.lightGrayColor()
         imagePicker.delegate = self
-        
-                let user = User(userLoggedIn: PFUser.currentUser()!)
-                
-                let imageFile = user.profilePicture
-                imageFile.getDataInBackgroundWithBlock({ (imageData, error) -> Void in
-                    if (error == nil) {
-                        if let image = UIImage(data:imageData!){
-                            dispatch_async(dispatch_get_main_queue()) {
-                                self.profilePicButton.setImage(image, forState: .Normal)
-                            }}
-                    }
-                })
-        
-
+        let user = User.sharedInstance()
+        user.refreshUser()
+        let image = user.profilePicture
+        self.profilePicButton.setImage(image, forState: .Normal)
+        self.userLabel.text = User.sharedInstance().userName
     }
-    
-    //----------BUTTON PRESSED----------//
-    //---------------------------------//
-    
-        @IBAction func postButtonPressed(sender: AnyObject) {
-            
-            if (imageExist){
-            // Works cleanly.
-                
-                let user = PFUser.currentUser()
-                let photoPost = PFObject(className:"Images")
-                let imageData = UIImageJPEGRepresentation(self.imagePost.image!, 0.5)
-                let parseImageFile = PFFile(name: "upload.jpg", data: imageData!)
-                photoPost["image"] = parseImageFile
-                photoPost["imageCaption"] = imageCaption.text
-                photoPost["uploader"] = user
-                photoPost.saveInBackgroundWithBlock({ (success, error: NSError?) -> Void in
-                    if error == nil {
-                        self.navigationController?.popToRootViewControllerAnimated(true)
-                            }
-                            else
-                            {
-                            print(error)
-                    }
-                    })
-            }
-     
-            else if (textView.text == "" || textView.text=="How are you feeling?     ")
-                
-            {
-                
-                alertNotification("No post", message: "Please enter a status!")
-                self.view.endEditing(true)
-            
-            }
 
-            else
-                
-            {
+    
+    @IBAction func postButtonPressed(sender: AnyObject)
+    {
+        if (imageExist){
+            let user = PFUser.currentUser()
+            let photoPost = PFObject(className:"Images")
+            let imageData = UIImageJPEGRepresentation(self.imagePost.image!, 0.5)
+            let parseImageFile = PFFile(name: "upload.jpg", data: imageData!)
+            photoPost["image"] = parseImageFile
+            photoPost["imageCaption"] = imageCaption.text
+            photoPost["uploader"] = user
+            photoPost.saveInBackgroundWithBlock({ (success, error: NSError?) -> Void in
+                if error == nil
+                {
+                    self.navigationController?.popToRootViewControllerAnimated(true)
+                }
+                else
+                {
+                    print(error)
+                }
+            })
+        }
+        else if (textView.text == "" || textView.text=="How are you feeling?     ")
+        {
+            alertNotification("No post", message: "Please enter a status!")
+            self.view.endEditing(true)
+        }
+        else
+        {
                 let user = PFUser.currentUser()
                 // Create the comment
                 let post = PFObject(className:"Post")
@@ -97,65 +78,39 @@ class PostViewController: UIViewController, UITextViewDelegate, UINavigationCont
                 post["user"] =  user
                 post.saveInBackground()
                 textView.text=""
-            
-                // return to newfeed / root page
                 self.navigationController?.popToRootViewControllerAnimated(true)
-            }
-            
-            
         }
-    
-    
-    //----------CAMERA BUTTON PRESSED----------//
-    //----------------------------------------//
-    
-    
-    @IBAction func cameraButtonTapped(sender: AnyObject) {
-        
+    }
+
+    @IBAction func cameraButtonTapped(sender: AnyObject)
+    {
         if (UIImagePickerController.isSourceTypeAvailable(.Camera))
         {
-            
             if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil
             {
-            
                 imagePicker.allowsEditing = false
                 imagePicker.sourceType = .Camera
                 imagePicker.cameraCaptureMode = .Photo
                 presentViewController(imagePicker, animated: true, completion: {})
-            
-            
             } else
-            
             {
                 alertNotification("Rear camera does not exist", message: "Cannot access camera")
             }
         } else
-        
         {
             alertNotification("Camera inaccessable", message: "Application cannot access the camera.")
         }
-    
     }
-    
-    
-    //----------MEDIA BUTTON PRESSED----------//
-    //----------------------------------------//
-    @IBAction func mediaButtonTapped(sender: AnyObject) {
+
+    @IBAction func mediaButtonTapped(sender: AnyObject)
+    {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
-        
         presentViewController(imagePicker, animated: true, completion: nil)
     }
 
-
-    //////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////
-                            // PLACEHOLDER TEXTVIEW EDIT//
-
-    
-    func textViewDidBeginEditing(textView: UITextView) {
-        
+    func textViewDidBeginEditing(textView: UITextView)
+    {
         if textView.textColor == UIColor.lightGrayColor()
         {
             textView.text = nil
@@ -163,7 +118,8 @@ class PostViewController: UIViewController, UITextViewDelegate, UINavigationCont
         }
     }
     
-    func textViewDidEndEditing(textView: UITextView) {
+    func textViewDidEndEditing(textView: UITextView)
+    {
         if textView.text.isEmpty
         {
             textView.text = "How are you feeling?     "
@@ -171,19 +127,10 @@ class PostViewController: UIViewController, UITextViewDelegate, UINavigationCont
         }
     }
     
-
-    //////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////////////////////////////////////
-                    // TOOL BAR FOLLOW KEYBOARD AND END EDITING and alerts//
-    
-    
     @IBAction func swipeDown(sender: AnyObject)
     {
         self.view.endEditing(true)
     }
-    
-    ////////--------Toolbar goes up with keyboard code
     
     override func viewWillAppear(animated: Bool)
     {
@@ -191,7 +138,7 @@ class PostViewController: UIViewController, UITextViewDelegate, UINavigationCont
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
     }
-    
+
     override func viewWillDisappear(animated: Bool)
     {
         super.viewWillDisappear(animated)
@@ -201,76 +148,57 @@ class PostViewController: UIViewController, UITextViewDelegate, UINavigationCont
     
     
     // MARK: - Notifications
-    
-    func keyboardWillShowNotification(notification: NSNotification) {
+    func keyboardWillShowNotification(notification: NSNotification)
+    {
         updateBottomLayoutConstraintWithNotification(notification)
     }
     
-    func keyboardWillHideNotification(notification: NSNotification) {
+    func keyboardWillHideNotification(notification: NSNotification)
+    {
         updateBottomLayoutConstraintWithNotification(notification)
     }
     
-    func updateBottomLayoutConstraintWithNotification(notification: NSNotification) {
+    func updateBottomLayoutConstraintWithNotification(notification: NSNotification)
+    {
         let userInfo = notification.userInfo!
-        
         let animationDuration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         let convertedKeyboardEndFrame = view.convertRect(keyboardEndFrame, fromView: view.window)
         let rawAnimationCurve = (notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).unsignedIntValue << 16
         let animationCurve = UIViewAnimationOptions(rawValue: UInt(rawAnimationCurve))
-        
         bottomLayoutConstraint.constant = CGRectGetMaxY(view.bounds) - CGRectGetMinY(convertedKeyboardEndFrame)
-        
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: animationCurve, animations: {self.view.layoutIfNeeded()}, completion: nil)
     }
-    
     func alertNotification (title: String, message: String)
     {
-        
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "dismiss", style: UIAlertActionStyle.Default,handler: nil))
-        
         self.presentViewController(alertController, animated: true, completion: nil)
-        
     }
-
-   
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////
-                  // CAMERA IMAGE PICKER CONTROLLER DELEGATE//
-
-
 extension PostViewController: UIImagePickerControllerDelegate
-
 {
-
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         print("Got an image")
         let pickedImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage
         imagePicker.dismissViewControllerAnimated(true, completion:
         {
-            
             self.textView.hidden = true
             self.imagePost.hidden = false
             self.imageCaption.hidden = false
             self.imagePost.contentMode = .ScaleAspectFit
             self.imagePost.image = pickedImage
             self.imageExist = true
-            
+            User.sharedInstance().didEdit = true
         })
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         print("User canceled image")
         dismissViewControllerAnimated(true, completion: {
-            //if we want to do extra shit
         })
     }
-    
-    
 }
 
 
