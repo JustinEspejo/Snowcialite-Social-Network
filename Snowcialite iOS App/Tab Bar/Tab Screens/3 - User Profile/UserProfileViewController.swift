@@ -16,7 +16,7 @@ class UserProfileViewController: UIViewController, UINavigationControllerDelegat
   /*
 ----------------------VARIABLE INITIALIZATIONS---------------------------------------------------------------
   */
-    //
+    // User
     private var testUser = UserProfileTest.createNewsFeed()
 
     //storyboard reference variablesx`
