@@ -35,7 +35,7 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
             .responseJSON { response in
                 switch response.result {
                 case .Success:
-                    print("nice internet motha fuckaaaaa ☺️")
+                    print("nice internet ☺️")
                     let json = JSON(response.result.value!)
                     let a = round(json["main"]["temp"].floatValue).description
                     print(a + " json success")
@@ -51,7 +51,7 @@ class MountainReportViewController: UIViewController, UITextFieldDelegate
                     switch error.code
                         {
                         case NSURLErrorNotConnectedToInternet:
-                        print("No internet motha fuuckaaa get fios bitch 😷")
+                        print("No internet, get fios 😷")
                         default:
                         print("its not your internet bro")
                     }

@@ -36,7 +36,7 @@ class UserImages {
                                 {
                                     self.profilePicture.append(image)
                                     print("this is the pregnaant",image)
-                                    print("I'M GIVING YOU THE NEKKID PICS MOTHA FUCKA, GO ON WITH YOUR SHIT")
+                                    print("I'M GIVING YOU THE NEKKID PICS , GO ON WITH YOUR stuff")
                                 }
                             }
                             NSNotificationCenter.defaultCenter().postNotificationName("getPics", object: self)
@@ -76,8 +76,8 @@ class UserImages {
                                 if let image = UIImage(data:imageData!)
                                 {
                                     self.profilePicture.append(image)
-                                    print("this is the pregnaant",image)
-                                    print("I'M GIVING YOU THE NEKKID PICS MOTHA FUCKA, GO ON WITH YOUR SHIT")
+                                    print("this is the image",image)
+                                    print("I'M GIVING YOU PICS, GO ON WITH YOUR SHIT")
                                     NSNotificationCenter.defaultCenter().postNotificationName("getPics", object: self)
 
                                 }
