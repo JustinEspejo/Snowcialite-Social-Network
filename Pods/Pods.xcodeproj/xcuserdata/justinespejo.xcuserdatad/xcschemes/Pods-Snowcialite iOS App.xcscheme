@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '854CB847703FE544696750E3'
+               BlueprintIdentifier = 'F60180CEB06F30AC42CEE05F'
                BlueprintName = 'Pods-Snowcialite iOS App'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Snowcialite_iOS_App.framework'>

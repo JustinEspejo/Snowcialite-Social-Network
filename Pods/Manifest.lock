@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (3.1.1)
   - Bolts/Tasks (1.4.0)
-  - GoogleMaps (1.11.1)
   - Parse (1.9.1):
     - Bolts/Tasks (>= 1.4.0)
   - ParseUI (1.1.6):
@@ -11,7 +10,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
-  - GoogleMaps
   - Parse
   - ParseUI
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
@@ -28,7 +26,6 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 9b0a7188b961a03914a99304488bd226b0e46c0e
   Bolts: 0e9bce58b9b9f5e8a7a4d47b16d2fabec289072b
-  GoogleMaps: c947160008f414c66707a5ea60f35e92055c7670
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
   ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
