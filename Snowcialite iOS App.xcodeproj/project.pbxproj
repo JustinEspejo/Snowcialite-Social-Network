@@ -27,6 +27,9 @@
 		ED21F92B1CBAD3C300A9F5D8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9291CBAD3C300A9F5D8 /* Location.swift */; };
 		ED21F92C1CBAD3C300A9F5D8 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F92A1CBAD3C300A9F5D8 /* Run.swift */; };
 		ED21F92E1CBAD49000A9F5D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED21F92D1CBAD49000A9F5D8 /* MapKit.framework */; };
+		ED21F9531CBADDF600A9F5D8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9511CBADDF600A9F5D8 /* DataModel.xcdatamodeld */; };
+		ED21F9561CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9541CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift */; };
+		ED21F9571CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9551CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift */; };
 		ED35EA4C1BE6E6FC004A9A4D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */; };
 		ED5747F81BF6B14C009D6579 /* UserImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5747F71BF6B14C009D6579 /* UserImages.swift */; };
 		ED85E4AD1BEC0D9E00CCC06B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85E4AC1BEC0D9E00CCC06B /* User.swift */; };
@@ -84,6 +87,9 @@
 		ED21F9291CBAD3C300A9F5D8 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		ED21F92A1CBAD3C300A9F5D8 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		ED21F92D1CBAD49000A9F5D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ED21F9521CBADDF600A9F5D8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		ED21F9541CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Run+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED21F9551CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		ED5747F71BF6B14C009D6579 /* UserImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImages.swift; sourceTree = "<group>"; };
 		ED85E4AC1BEC0D9E00CCC06B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				1F2F32AA1BDC98BD0025C2DC /* LaunchScreen.storyboard */,
 				EDCFEB291BEF24FE0025983B /* Main.storyboard */,
 				1F2F32AE1BDC98BD0025C2DC /* Info.plist */,
+				ED21F9541CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift */,
+				ED21F9551CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift */,
+				ED21F9511CBADDF600A9F5D8 /* DataModel.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -501,11 +510,14 @@
 				ED95F5EC1BE15EAB00DFC554 /* MapViewController.swift in Sources */,
 				1F6B83301BE586E1006A6B07 /* LoginSignupViewController.swift in Sources */,
 				ED85E4AD1BEC0D9E00CCC06B /* User.swift in Sources */,
+				ED21F9531CBADDF600A9F5D8 /* DataModel.xcdatamodeld in Sources */,
 				ED21F92C1CBAD3C300A9F5D8 /* Run.swift in Sources */,
 				1F2F32C51BDC9CD30025C2DC /* MountainReportViewController.swift in Sources */,
 				CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */,
 				1F2F32B71BDC9C0C0025C2DC /* TabBarViewController.swift in Sources */,
+				ED21F9571CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift in Sources */,
 				ED21F9271CBAD2E300A9F5D8 /* MulticolorPolylineSegment.swift in Sources */,
+				ED21F9561CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift in Sources */,
 				ED21F92B1CBAD3C300A9F5D8 /* Location.swift in Sources */,
 				EDB1B5FB1BE4079B007950EF /* newsFeedTest.swift in Sources */,
 				1F2F32C81BDC9CD30025C2DC /* SettingsViewController.swift in Sources */,
@@ -771,6 +783,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED21F9511CBADDF600A9F5D8 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED21F9521CBADDF600A9F5D8 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = ED21F9521CBADDF600A9F5D8 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC360FDF1BC0E0E6001B91E8 /* Project object */;
 }

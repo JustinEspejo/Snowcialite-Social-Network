@@ -970,7 +970,7 @@
         <!--Home-->
         <scene sceneID="QZJ-R4-3PJ">
             <objects>
-                <viewController title="Home" id="0NH-Sk-1Eq" customClass="HomeViewController" customModule="MoonRunner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="0NH-Sk-1Eq" customClass="HomeViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eKG-IM-GSS"/>
                         <viewControllerLayoutGuide type="bottom" id="qVR-35-mCF"/>
@@ -1037,7 +1037,7 @@
         <!--New Run-->
         <scene sceneID="yb1-vj-GLB">
             <objects>
-                <viewController title="New Run" id="PlK-Ue-fO6" customClass="NewRunViewController" customModule="MoonRunner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Run" id="PlK-Ue-fO6" customClass="NewRunViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Cw-F3-Evo"/>
                         <viewControllerLayoutGuide type="bottom" id="yRX-yK-STj"/>
@@ -1157,7 +1157,7 @@
         <!--Detail-->
         <scene sceneID="Ulr-Z9-nGO">
             <objects>
-                <viewController title="Detail" id="Gb8-sP-1Y8" customClass="DetailViewController" customModule="MoonRunner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail" id="Gb8-sP-1Y8" customClass="DetailViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ggw-de-PaO"/>
                         <viewControllerLayoutGuide type="bottom" id="SEo-mZ-FaI"/>
@@ -1166,7 +1166,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Vv-UR-E9t">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Vv-UR-E9t">
                                 <rect key="frame" x="0.0" y="64" width="600" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="mbt-sd-Dh6"/>
@@ -1193,7 +1193,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jm-dF-z29">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jm-dF-z29">
                                 <rect key="frame" x="282" y="374" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
