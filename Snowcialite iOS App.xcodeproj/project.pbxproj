@@ -26,6 +26,7 @@
 		ED21F9281CBAD2E300A9F5D8 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9241CBAD2E300A9F5D8 /* NewRunViewController.swift */; };
 		ED21F92B1CBAD3C300A9F5D8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9291CBAD3C300A9F5D8 /* Location.swift */; };
 		ED21F92C1CBAD3C300A9F5D8 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F92A1CBAD3C300A9F5D8 /* Run.swift */; };
+		ED21F92E1CBAD49000A9F5D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED21F92D1CBAD49000A9F5D8 /* MapKit.framework */; };
 		ED35EA4C1BE6E6FC004A9A4D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */; };
 		ED5747F81BF6B14C009D6579 /* UserImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5747F71BF6B14C009D6579 /* UserImages.swift */; };
 		ED85E4AD1BEC0D9E00CCC06B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85E4AC1BEC0D9E00CCC06B /* User.swift */; };
@@ -82,6 +83,7 @@
 		ED21F9241CBAD2E300A9F5D8 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 		ED21F9291CBAD3C300A9F5D8 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		ED21F92A1CBAD3C300A9F5D8 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		ED21F92D1CBAD49000A9F5D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		ED5747F71BF6B14C009D6579 /* UserImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImages.swift; sourceTree = "<group>"; };
 		ED85E4AC1BEC0D9E00CCC06B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED21F92E1CBAD49000A9F5D8 /* MapKit.framework in Frameworks */,
 				9982B3D6923F293F7F93090D /* Pods_Snowcialite_iOS_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +218,7 @@
 		84999543058872F766EB2F21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED21F92D1CBAD49000A9F5D8 /* MapKit.framework */,
 				E7FD729DDA54038ED8F88F47 /* Pods_Snowcialite_iOS_App.framework */,
 			);
 			name = Frameworks;
@@ -369,6 +373,14 @@
 					CC360FE61BC0E0E6001B91E8 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = GWARJ29EYF;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CC360FFA1BC0E0E6001B91E8 = {
 						CreatedOnToolsVersion = 7.0.1;
