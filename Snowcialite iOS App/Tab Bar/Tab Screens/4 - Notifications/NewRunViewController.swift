@@ -29,9 +29,11 @@ class NewRunViewController: UIViewController {
   var distance = 0.0
 
   lazy var locationManager: CLLocationManager = {
+    print("location manager update")
     var _locationManager = CLLocationManager()
     _locationManager.delegate = self
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    print(kCLLocationAccuracyBest)
     _locationManager.activityType = .Fitness
 
     // Movement threshold for new events
@@ -84,12 +86,14 @@ class NewRunViewController: UIViewController {
     // 1
     let savedRun = NSEntityDescription.insertNewObjectForEntityForName("Run",
       inManagedObjectContext: managedObjectContext!) as! Run
+    print("this is the distance: ",  distance, "seconds: ", seconds)
     savedRun.distance = distance
     savedRun.duration = seconds
     savedRun.timestamp = NSDate()
 
     // 2
     var savedLocations = [Location]()
+    print("location: ", savedLocations)
     for location in locations {
       let savedLocation = NSEntityDescription.insertNewObjectForEntityForName("Location",
         inManagedObjectContext: managedObjectContext!) as! Location
@@ -168,7 +172,7 @@ extension NewRunViewController: CLLocationManagerDelegate {
   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     for location in locations {
       let howRecent = location.timestamp.timeIntervalSinceNow
-
+        print("updating")
       if abs(howRecent) < 10 && location.horizontalAccuracy < 20 {
         //update distance
         if self.locations.count > 0 {

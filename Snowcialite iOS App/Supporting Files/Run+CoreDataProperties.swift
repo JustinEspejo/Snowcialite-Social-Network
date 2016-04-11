@@ -14,9 +14,6 @@ import CoreData
 
 extension Run {
 
-    @NSManaged var duration: NSNumber
-    @NSManaged var distance: NSNumber
-    @NSManaged var timestamp: NSDate
-    @NSManaged var relationship: Location?
+
 
 }
