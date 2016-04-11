@@ -74,7 +74,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDt-8Y-jyd">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Warm, Cloudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDt-8Y-jyd">
                                                         <rect key="frame" x="200" y="131" width="237" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -234,10 +234,11 @@
                                                     </constraints>
                                                 </imageView>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nGL-qq-F2b">
-                                                    <rect key="frame" x="239" y="185" width="115" height="29"/>
+                                                    <rect key="frame" x="210" y="185" width="173" height="29"/>
                                                     <segments>
                                                         <segment title="Photos"/>
                                                         <segment title="Posts"/>
+                                                        <segment title="Runs"/>
                                                     </segments>
                                                     <connections>
                                                         <action selector="segmentedViewControlPressed:" destination="G9d-IB-YJf" eventType="valueChanged" id="E4q-o2-9Mr"/>
@@ -857,10 +858,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="lK7-2N-0gM" kind="show" identifier="initial screen" id="nQs-1C-ofk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yq-kV-IE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1885" y="-1045"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="yTG-Ag-xJ7">
+            <objects>
+                <viewController id="lK7-2N-0gM" customClass="IntroViewController" customModule="Snowcialite_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DDu-KI-xFb"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Dg-1f-JKv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fyz-0j-aR1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97o-Cc-ZVE">
+                                <rect key="frame" x="123" y="403" width="365" height="55"/>
+                                <color key="backgroundColor" red="0.97465062081590259" green="1" blue="0.99899697268946785" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="365" id="UsZ-hG-fIh"/>
+                                    <constraint firstAttribute="height" constant="55" id="d2i-Wk-ncR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Enter Snowcialite"/>
+                                <connections>
+                                    <action selector="enterButtonPressed:" destination="lK7-2N-0gM" eventType="touchUpInside" id="Ggf-re-dvy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Dg-1f-JKv" firstAttribute="top" secondItem="97o-Cc-ZVE" secondAttribute="bottom" constant="142" id="21A-eB-26Z"/>
+                            <constraint firstItem="97o-Cc-ZVE" firstAttribute="centerX" secondItem="Fyz-0j-aR1" secondAttribute="centerX" constant="5.5" id="tpa-un-6GR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enterButton" destination="97o-Cc-ZVE" id="JbX-yH-rNS"/>
+                        <segue destination="RKs-uv-B6W" kind="show" identifier="return" id="CVo-if-DdB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCH-pA-ZOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2623" y="-1045"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="F5R-mv-2of">
@@ -899,11 +944,11 @@
             </objects>
             <point key="canvasLocation" x="1850" y="-307"/>
         </scene>
-        <!--Notifications-->
+        <!--Runs-->
         <scene sceneID="iM1-td-lVY">
             <objects>
                 <navigationController id="L8T-tR-HMQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notifications" image="earth-usa" id="DNh-20-aFQ"/>
+                    <tabBarItem key="tabBarItem" title="Runs" image="earth-usa" id="DNh-20-aFQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6De-R6-gCm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -979,29 +1024,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtb-RH-lzW">
-                                <rect key="frame" x="36" y="492" width="528" height="88"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtb-RH-lzW">
+                                <rect key="frame" x="36" y="387" width="528" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="mAM-eI-CyS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Badges" backgroundImage="blue-btn">
+                                <state key="normal" title="Record Runs">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAK-W5-fvE">
-                                <rect key="frame" x="36" y="384" width="528" height="88"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAK-W5-fvE">
+                                <rect key="frame" x="36" y="279" width="528" height="88"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Past Runs" backgroundImage="blue-btn">
+                                <state key="normal" title="Archived Runs">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tai-Vv-cd7">
-                                <rect key="frame" x="36" y="276" width="528" height="88"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tai-Vv-cd7">
+                                <rect key="frame" x="36" y="171" width="528" height="88"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="New Run" backgroundImage="green-btn">
+                                <state key="normal" title="New Run">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1021,14 +1066,14 @@
                             <constraint firstItem="YAK-W5-fvE" firstAttribute="top" secondItem="tai-Vv-cd7" secondAttribute="bottom" constant="20" id="LGG-ho-32C"/>
                             <constraint firstItem="tai-Vv-cd7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eKG-IM-GSS" secondAttribute="bottom" constant="60" id="P8B-DI-0HD"/>
                             <constraint firstItem="Rtb-RH-lzW" firstAttribute="leading" secondItem="YAK-W5-fvE" secondAttribute="leading" id="RGG-yI-HQa"/>
-                            <constraint firstItem="qVR-35-mCF" firstAttribute="top" secondItem="Rtb-RH-lzW" secondAttribute="bottom" constant="20" id="UPD-uT-Ke7"/>
-                            <constraint firstItem="Rtb-RH-lzW" firstAttribute="leading" secondItem="tb8-89-7KL" secondAttribute="leadingMargin" constant="20" id="YQj-U1-Jte"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Rtb-RH-lzW" secondAttribute="trailing" constant="20" id="Z51-Uc-Ofc"/>
+                            <constraint firstItem="qVR-35-mCF" firstAttribute="top" secondItem="Rtb-RH-lzW" secondAttribute="bottom" constant="76" id="UPD-uT-Ke7"/>
+                            <constraint firstItem="Rtb-RH-lzW" firstAttribute="leading" secondItem="tb8-89-7KL" secondAttribute="leadingMargin" constant="16" id="YQj-U1-Jte"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rtb-RH-lzW" secondAttribute="trailing" constant="16" id="Z51-Uc-Ofc"/>
                             <constraint firstItem="Rtb-RH-lzW" firstAttribute="top" secondItem="YAK-W5-fvE" secondAttribute="bottom" constant="20" id="p10-TJ-ZiN"/>
                             <constraint firstItem="Rtb-RH-lzW" firstAttribute="trailing" secondItem="YAK-W5-fvE" secondAttribute="trailing" id="vRQ-uI-8F5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome to MoonRunner!" id="NOP-9V-vDI"/>
+                    <navigationItem key="navigationItem" title="Start Shredding!" id="NOP-9V-vDI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHe-5o-R6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1071,13 +1116,13 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOs-4G-R0K">
-                                <rect key="frame" x="56" y="514" width="488" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOs-4G-R0K">
+                                <rect key="frame" x="60" y="465" width="480" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="itu-Y5-9qC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Stop" backgroundImage="red-btn">
+                                <state key="normal" title="Stop">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1085,13 +1130,13 @@
                                     <action selector="stopPressed:" destination="PlK-Ue-fO6" eventType="touchUpInside" id="5cu-Wr-9eg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-Zi-Gi8">
-                                <rect key="frame" x="56" y="406" width="488" height="88"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-Zi-Gi8">
+                                <rect key="frame" x="60" y="357" width="480" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="2FK-bz-8d5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="Start!" backgroundImage="green-btn">
+                                <state key="normal" title="Start!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1099,8 +1144,8 @@
                                     <action selector="startPressed:" destination="PlK-Ue-fO6" eventType="touchUpInside" id="cPf-tA-Bwz"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mgS-96-AUL">
-                                <rect key="frame" x="0.0" y="181" width="600" height="205"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mgS-96-AUL">
+                                <rect key="frame" x="0.0" y="181" width="600" height="156"/>
                                 <connections>
                                     <outlet property="delegate" destination="PlK-Ue-fO6" id="SXQ-Q0-zNe"/>
                                 </connections>
@@ -1232,20 +1277,17 @@
     </scenes>
     <resources>
         <image name="background" width="656" height="960"/>
-        <image name="blue-btn" width="472" height="152"/>
         <image name="earth-usa" width="30" height="30"/>
-        <image name="green-btn" width="472" height="152"/>
         <image name="id-card" width="30" height="30"/>
         <image name="mario" width="270" height="270"/>
         <image name="mountain" width="30" height="30"/>
         <image name="newspaper" width="30" height="30"/>
-        <image name="red-btn" width="472" height="152"/>
         <image name="snobord" width="720" height="960"/>
         <image name="spanner" width="30" height="30"/>
         <image name="weatherBackground" width="930" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="O2O-VU-Slm"/>
-        <segue reference="1Jh-69-N0Y"/>
+        <segue reference="CVo-if-DdB"/>
     </inferredMetricsTieBreakers>
 </document>

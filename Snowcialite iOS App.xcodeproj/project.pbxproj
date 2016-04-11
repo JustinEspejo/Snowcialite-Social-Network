@@ -30,6 +30,11 @@
 		ED21F9531CBADDF600A9F5D8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9511CBADDF600A9F5D8 /* DataModel.xcdatamodeld */; };
 		ED21F9561CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9541CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift */; };
 		ED21F9571CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9551CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift */; };
+		ED21F9641CBB492E00A9F5D8 /* VideoCutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9621CBB492E00A9F5D8 /* VideoCutter.swift */; };
+		ED21F9651CBB492E00A9F5D8 /* VideoSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9631CBB492E00A9F5D8 /* VideoSplashViewController.swift */; };
+		ED21F9671CBB495600A9F5D8 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F9661CBB495600A9F5D8 /* IntroViewController.swift */; };
+		ED21F9691CBB557600A9F5D8 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = ED21F9681CBB557600A9F5D8 /* video.mov */; };
+		ED21F96D1CBB597500A9F5D8 /* MountainReportViewControllerMapID.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21F96C1CBB597500A9F5D8 /* MountainReportViewControllerMapID.swift */; };
 		ED35EA4C1BE6E6FC004A9A4D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */; };
 		ED5747F81BF6B14C009D6579 /* UserImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5747F71BF6B14C009D6579 /* UserImages.swift */; };
 		ED85E4AD1BEC0D9E00CCC06B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85E4AC1BEC0D9E00CCC06B /* User.swift */; };
@@ -88,8 +93,13 @@
 		ED21F92A1CBAD3C300A9F5D8 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		ED21F92D1CBAD49000A9F5D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ED21F9521CBADDF600A9F5D8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		ED21F9541CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Run+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ED21F9551CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED21F9541CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Run+CoreDataProperties.swift"; path = "../../../Supporting Files/Run+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED21F9551CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Location+CoreDataProperties.swift"; path = "../../../Supporting Files/Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED21F9621CBB492E00A9F5D8 /* VideoCutter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCutter.swift; sourceTree = "<group>"; };
+		ED21F9631CBB492E00A9F5D8 /* VideoSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSplashViewController.swift; sourceTree = "<group>"; };
+		ED21F9661CBB495600A9F5D8 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		ED21F9681CBB557600A9F5D8 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		ED21F96C1CBB597500A9F5D8 /* MountainReportViewControllerMapID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainReportViewControllerMapID.swift; sourceTree = "<group>"; };
 		ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		ED5747F71BF6B14C009D6579 /* UserImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImages.swift; sourceTree = "<group>"; };
 		ED85E4AC1BEC0D9E00CCC06B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -145,8 +155,6 @@
 				1F2F32AA1BDC98BD0025C2DC /* LaunchScreen.storyboard */,
 				EDCFEB291BEF24FE0025983B /* Main.storyboard */,
 				1F2F32AE1BDC98BD0025C2DC /* Info.plist */,
-				ED21F9541CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift */,
-				ED21F9551CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift */,
 				ED21F9511CBADDF600A9F5D8 /* DataModel.xcdatamodeld */,
 			);
 			path = "Supporting Files";
@@ -158,7 +166,7 @@
 				1F2F32BA1BDC9CD30025C2DC /* 1 - News Feed */,
 				1F2F32BC1BDC9CD30025C2DC /* 2 - Mountain Report */,
 				1F2F32BE1BDC9CD30025C2DC /* 3 - User Profile */,
-				1F2F32C01BDC9CD30025C2DC /* 4 - Notifications */,
+				1F2F32C01BDC9CD30025C2DC /* 4 - Trails */,
 				1F2F32C21BDC9CD30025C2DC /* 5 - Settings */,
 			);
 			name = "Tab Screens";
@@ -168,9 +176,9 @@
 		1F2F32BA1BDC9CD30025C2DC /* 1 - News Feed */ = {
 			isa = PBXGroup;
 			children = (
+				EDB1B5F91BE4073B007950EF /* 1.1 Test Newsfeed */,
 				1F2F32BB1BDC9CD30025C2DC /* NewsFeedViewController.swift */,
 				ED35EA4B1BE6E6FC004A9A4D /* PostViewController.swift */,
-				EDB1B5F91BE4073B007950EF /* 1.1 Test Newsfeed */,
 			);
 			path = "1 - News Feed";
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 			children = (
 				1F2F32BD1BDC9CD30025C2DC /* MountainReportViewController.swift */,
 				ED95F5EB1BE15EAB00DFC554 /* MapViewController.swift */,
+				ED21F96C1CBB597500A9F5D8 /* MountainReportViewControllerMapID.swift */,
 			);
 			path = "2 - Mountain Report";
 			sourceTree = "<group>";
@@ -195,16 +204,16 @@
 			path = "3 - User Profile";
 			sourceTree = "<group>";
 		};
-		1F2F32C01BDC9CD30025C2DC /* 4 - Notifications */ = {
+		1F2F32C01BDC9CD30025C2DC /* 4 - Trails */ = {
 			isa = PBXGroup;
 			children = (
+				ED21F9581CBAE51100A9F5D8 /* model */,
 				ED21F9211CBAD2E300A9F5D8 /* DetailViewController.swift */,
-				ED21F9291CBAD3C300A9F5D8 /* Location.swift */,
-				ED21F92A1CBAD3C300A9F5D8 /* Run.swift */,
 				ED21F9221CBAD2E300A9F5D8 /* HomeViewController.swift */,
 				ED21F9231CBAD2E300A9F5D8 /* MulticolorPolylineSegment.swift */,
 				ED21F9241CBAD2E300A9F5D8 /* NewRunViewController.swift */,
 			);
+			name = "4 - Trails";
 			path = "4 - Notifications";
 			sourceTree = "<group>";
 		};
@@ -219,7 +228,9 @@
 		1F6B832E1BE586E1006A6B07 /* Login Screen */ = {
 			isa = PBXGroup;
 			children = (
+				ED21F9591CBB422200A9F5D8 /* VideoBackground Files */,
 				1F6B832F1BE586E1006A6B07 /* LoginSignupViewController.swift */,
+				ED21F9661CBB495600A9F5D8 /* IntroViewController.swift */,
 			);
 			path = "Login Screen";
 			sourceTree = "<group>";
@@ -291,6 +302,27 @@
 				CC36100C1BC0E0E6001B91E8 /* Info.plist */,
 			);
 			path = "Snowcialite iOS AppUITests";
+			sourceTree = "<group>";
+		};
+		ED21F9581CBAE51100A9F5D8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				ED21F9541CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift */,
+				ED21F9551CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift */,
+				ED21F9291CBAD3C300A9F5D8 /* Location.swift */,
+				ED21F92A1CBAD3C300A9F5D8 /* Run.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		ED21F9591CBB422200A9F5D8 /* VideoBackground Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED21F9681CBB557600A9F5D8 /* video.mov */,
+				ED21F9621CBB492E00A9F5D8 /* VideoCutter.swift */,
+				ED21F9631CBB492E00A9F5D8 /* VideoSplashViewController.swift */,
+			);
+			name = "VideoBackground Files";
 			sourceTree = "<group>";
 		};
 		EDB1B5F91BE4073B007950EF /* 1.1 Test Newsfeed */ = {
@@ -428,6 +460,7 @@
 			files = (
 				EDCFEB2B1BEF24FE0025983B /* Main.storyboard in Resources */,
 				1F2F32AF1BDC98BD0025C2DC /* Assets.xcassets in Resources */,
+				ED21F9691CBB557600A9F5D8 /* video.mov in Resources */,
 				1F2F32B01BDC98BD0025C2DC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED21F9641CBB492E00A9F5D8 /* VideoCutter.swift in Sources */,
 				1F2F32B81BDC9C0C0025C2DC /* ViewController2.swift in Sources */,
 				ED21F9251CBAD2E300A9F5D8 /* DetailViewController.swift in Sources */,
 				EDBF34111BEEC1B800C16B58 /* UserProfileTest.swift in Sources */,
@@ -513,10 +547,13 @@
 				ED21F9531CBADDF600A9F5D8 /* DataModel.xcdatamodeld in Sources */,
 				ED21F92C1CBAD3C300A9F5D8 /* Run.swift in Sources */,
 				1F2F32C51BDC9CD30025C2DC /* MountainReportViewController.swift in Sources */,
+				ED21F96D1CBB597500A9F5D8 /* MountainReportViewControllerMapID.swift in Sources */,
 				CC360FEB1BC0E0E6001B91E8 /* AppDelegate.swift in Sources */,
+				ED21F9651CBB492E00A9F5D8 /* VideoSplashViewController.swift in Sources */,
 				1F2F32B71BDC9C0C0025C2DC /* TabBarViewController.swift in Sources */,
 				ED21F9571CBADE0A00A9F5D8 /* Location+CoreDataProperties.swift in Sources */,
 				ED21F9271CBAD2E300A9F5D8 /* MulticolorPolylineSegment.swift in Sources */,
+				ED21F9671CBB495600A9F5D8 /* IntroViewController.swift in Sources */,
 				ED21F9561CBADE0A00A9F5D8 /* Run+CoreDataProperties.swift in Sources */,
 				ED21F92B1CBAD3C300A9F5D8 /* Location.swift in Sources */,
 				EDB1B5FB1BE4079B007950EF /* newsFeedTest.swift in Sources */,

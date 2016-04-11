@@ -37,7 +37,7 @@ class newsFeedTest
             
             newsFeedTest(title: "Met some cool japanese people in the mountain.", description: "japanese people rock!", featuredImage: UIImage(named: "3")!),
             
-            newsFeedTest(title: "shredding with some noobs", description: "gg", featuredImage: UIImage(named: "4")!),
+            newsFeedTest(title: "shredding with some friends", description: "gg", featuredImage: UIImage(named: "4")!),
         
         ]
     }

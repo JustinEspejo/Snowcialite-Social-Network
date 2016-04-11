@@ -73,6 +73,7 @@ class UserProfileViewController: UIViewController, UINavigationControllerDelegat
     
     override func viewWillAppear(animated: Bool)
     {
+        self.navigationController!.navigationBarHidden = false;
         User.sharedInstance().refreshUser()
         print("GETTING HERE TO BLOCK AND WAIT TILL DATA IS BACK")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateProfilePicture", name: "profilePictureReceived", object: nil)

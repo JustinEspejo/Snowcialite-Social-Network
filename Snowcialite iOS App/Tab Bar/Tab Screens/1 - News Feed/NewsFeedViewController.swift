@@ -1,3 +1,8 @@
+//
+//  Created by Justin Espejo on 11/12/15.
+//  Copyright © 2016 Snowcialite. All rights reserved.
+//
+
 import UIKit
 import Parse
 
@@ -43,6 +48,7 @@ class NewsFeedViewController: UIViewController
     
     override func viewWillAppear(animated: Bool)
     {
+        self.navigationController!.navigationBarHidden = false;
         User.sharedInstance().refreshUser()
         print("GETTING HERE TO BLOCK AND WAIT")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateProfilePicture", name: "profilePictureReceived", object: nil)

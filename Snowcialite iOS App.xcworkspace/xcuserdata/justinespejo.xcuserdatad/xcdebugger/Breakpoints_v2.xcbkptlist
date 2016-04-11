@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "481994147.530765"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "eachSecond(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "481994147.530765"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "startLocationUpdates()"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "481994147.530765"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "saveRun()"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009215.448478"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "stopPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009253.894205"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "actionSheet(_:clickedButtonAtIndex:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/DetailViewController.swift"
-            timestampString = "482009351.762886"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "configureView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/DetailViewController.swift"
-            timestampString = "482009352.708978"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "configureView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/DetailViewController.swift"
-            timestampString = "482009354.389009"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "configureView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/DetailViewController.swift"
-            timestampString = "482009355.270947"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "configureView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009473.469214"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "stopPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009474.873682"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "stopPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009542.61004"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "saveRun()"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009543.76405"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "saveRun()"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009544.920185"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "saveRun()"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009545.594189"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "saveRun()"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009579.757779"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "saveRun()"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009582.255844"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "saveRun()"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Snowcialite iOS App/Tab Bar/Tab Screens/4 - Notifications/NewRunViewController.swift"
-            timestampString = "482009724.030073"
+            timestampString = "482041137.263426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "actionSheet(_:clickedButtonAtIndex:)"
             landmarkType = "5">
          </BreakpointContent>
